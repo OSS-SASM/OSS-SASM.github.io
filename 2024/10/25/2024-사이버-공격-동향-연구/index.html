@@ -1,0 +1,3182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>2024 사이버 공격 동향 연구</title>
+  <meta name='description' content='현재 사이버 보안의 중요성과 빠르게 변화하는 위협 환경을 소개하고, 이 보고서의 목적을 명확히 설명합니다. 2024년 초, 각 주요 보안 회사들이 발표한 사이버 보안 트렌드에 대한 전망을 체계적으로 정리.....'>
+
+  <link rel="canonical" href="/2024/10/25/2024-%EC%82%AC%EC%9D%B4%EB%B2%84-%EA%B3%B5%EA%B2%A9-%EB%8F%99%ED%96%A5-%EC%97%B0%EA%B5%AC/">
+  <link rel="alternate" type="application/rss+xml" title="SASM" href="/feed.xml">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <!-- Ionicons -->
+  <link href="https://unpkg.com/ionicons@4.2.2/dist/css/ionicons.min.css" rel="stylesheet">
+
+  <style>
+  
+  /*!------------------------------------------------------------------
+[MAIN STYLESHEET]
+-------------------------------------------------------------------*/.block{display:block}.inline-block{display:inline-block}.inline{display:inline}.show{display:block}.hide{display:none}.invisible{visibility:hidden}.list-reset{list-style-type:none;margin:0;padding:0}.clearfix::after,.clearfix ::before{content:"";display:table;clear:both}.screen-reader-text{clip:rect(1px, 1px, 1px, 1px);height:1px;overflow:hidden;position:absolute !important;width:1px;word-wrap:normal !important}/*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}h1{font-size:2em;margin:0.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace, monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder;color:#fff}code,kbd,samp{font-family:monospace, monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-0.25em}sup{top:-0.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,[type="button"],[type="reset"],[type="submit"]{-webkit-appearance:button}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type="button"]:-moz-focusring,[type="reset"]:-moz-focusring,[type="submit"]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:0.35em 0.75em 0.625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type="checkbox"],[type="radio"]{box-sizing:border-box;padding:0}[type="number"]::-webkit-inner-spin-button,[type="number"]::-webkit-outer-spin-button{height:auto}[type="search"]{-webkit-appearance:textfield;outline-offset:-2px}[type="search"]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}template{display:none}[hidden]{display:none}body,h1,h2,h3,h4,h5,h6,p,blockquote,pre,dl,dd,ol,ul,fieldset,legend,figure,hr{margin:0;padding:0}li>ul,li>ol{margin-bottom:0}table{border-collapse:collapse;border-spacing:0}h1,h2,h3,h4,h5,h6,ul,ol,dl,blockquote,p,address,hr,table,fieldset,figure,pre{margin-bottom:30px}ul,ol,dd{margin-left:20px}.highlight{border-radius:4px;color:#fff;background:#17151E}.highlight .c{color:#998;font-style:italic}.highlight .err{color:#a61717;background-color:#e3d2d2}.highlight .k{font-weight:bold}.highlight .o{font-weight:bold}.highlight .cm{color:#998;font-style:italic}.highlight .cp{color:#999;font-weight:bold}.highlight .c1{color:#998;font-style:italic}.highlight .cs{color:#999;font-weight:bold;font-style:italic}.highlight .gd{color:#000;background-color:#fdd}.highlight .gd .x{color:#000;background-color:#faa}.highlight .ge{font-style:italic}.highlight .gr{color:#a00}.highlight .gh{color:#999}.highlight .gi{color:#000;background-color:#dfd}.highlight .gi .x{color:#000;background-color:#afa}.highlight .go{color:#888}.highlight .gp{color:#555}.highlight .gs{font-weight:bold}.highlight .gu{color:#fff}.highlight .gt{color:#a00}.highlight .kc{font-weight:bold}.highlight .kd{font-weight:bold}.highlight .kp{font-weight:bold}.highlight .kr{font-weight:bold}.highlight .kt{color:#458;font-weight:bold}.highlight .m{color:#099}.highlight .s{color:#d85858}.highlight .na{color:#008080}.highlight .nb{color:#0086B3}.highlight .nc{color:#458;font-weight:bold}.highlight .no{color:#008080}.highlight .ni{color:#800080}.highlight .ne{color:#900;font-weight:bold}.highlight .nf{color:#900;font-weight:bold}.highlight .nn{color:#555}.highlight .nt{color:#6565ff}.highlight .nv{color:#008080}.highlight .ow{font-weight:bold}.highlight .w{color:#bbb}.highlight .mf{color:#099}.highlight .mh{color:#099}.highlight .mi{color:#099}.highlight .mo{color:#099}.highlight .sb{color:#d85858}.highlight .sc{color:#d85858}.highlight .sd{color:#d85858}.highlight .s2{color:#d85858}.highlight .se{color:#d85858}.highlight .sh{color:#d85858}.highlight .si{color:#d85858}.highlight .sx{color:#d85858}.highlight .sr{color:#009926}.highlight .s1{color:#d85858}.highlight .ss{color:#990073}.highlight .bp{color:#999}.highlight .vc{color:#008080}.highlight .vg{color:#008080}.highlight .vi{color:#008080}.highlight .il{color:#099}.container{max-width:1340px;padding-left:20px;padding-right:20px;margin:0 auto}.container-big{max-width:1600px;padding-left:20px;padding-right:20px;margin:0 auto}.row{display:flex;flex-wrap:wrap;flex:0 1 auto;flex-direction:row;box-sizing:border-box;margin-left:-16px;margin-right:-16px}.col{padding-left:16px;padding-right:16px}[class^="col-"]{flex:auto}.col-0{width:0%}.col-1{width:8.3333333333%}.col-2{width:16.6666666667%}.col-3{width:25%}.col-4{width:33.3333333333%}.col-5{width:41.6666666667%}.col-6{width:50%}.col-7{width:58.3333333333%}.col-8{width:66.6666666667%}.col-9{width:75%}.col-10{width:83.3333333333%}.col-11{width:91.6666666667%}.col-12{width:100%}.push-0{margin-left:0%}.push-1{margin-left:8.3333333333%}.push-2{margin-left:16.6666666667%}.push-3{margin-left:25%}.push-4{margin-left:33.3333333333%}.push-5{margin-left:41.6666666667%}.push-6{margin-left:50%}.push-7{margin-left:58.3333333333%}.push-8{margin-left:66.6666666667%}.push-9{margin-left:75%}.push-10{margin-left:83.3333333333%}.push-11{margin-left:91.6666666667%}.push-12{margin-left:100%}.pull-0{margin-right:0%}.pull-1{margin-right:8.3333333333%}.pull-2{margin-right:16.6666666667%}.pull-3{margin-right:25%}.pull-4{margin-right:33.3333333333%}.pull-5{margin-right:41.6666666667%}.pull-6{margin-right:50%}.pull-7{margin-right:58.3333333333%}.pull-8{margin-right:66.6666666667%}.pull-9{margin-right:75%}.pull-10{margin-right:83.3333333333%}.pull-11{margin-right:91.6666666667%}.pull-12{margin-right:100%}@media (max-width: 992px){.col-d-0{width:0%}.col-d-1{width:8.3333333333%}.col-d-2{width:16.6666666667%}.col-d-3{width:25%}.col-d-4{width:33.3333333333%}.col-d-5{width:41.6666666667%}.col-d-6{width:50%}.col-d-7{width:58.3333333333%}.col-d-8{width:66.6666666667%}.col-d-9{width:75%}.col-d-10{width:83.3333333333%}.col-d-11{width:91.6666666667%}.col-d-12{width:100%}.push-d-0{margin-left:0%}.push-d-1{margin-left:8.3333333333%}.push-d-2{margin-left:16.6666666667%}.push-d-3{margin-left:25%}.push-d-4{margin-left:33.3333333333%}.push-d-5{margin-left:41.6666666667%}.push-d-6{margin-left:50%}.push-d-7{margin-left:58.3333333333%}.push-d-8{margin-left:66.6666666667%}.push-d-9{margin-left:75%}.push-d-10{margin-left:83.3333333333%}.push-d-11{margin-left:91.6666666667%}.push-d-12{margin-left:100%}.pull-d-0{margin-right:0%}.pull-d-1{margin-right:8.3333333333%}.pull-d-2{margin-right:16.6666666667%}.pull-d-3{margin-right:25%}.pull-d-4{margin-right:33.3333333333%}.pull-d-5{margin-right:41.6666666667%}.pull-d-6{margin-right:50%}.pull-d-7{margin-right:58.3333333333%}.pull-d-8{margin-right:66.6666666667%}.pull-d-9{margin-right:75%}.pull-d-10{margin-right:83.3333333333%}.pull-d-11{margin-right:91.6666666667%}.pull-d-12{margin-right:100%}}@media (max-width: 768px){.col-t-0{width:0%}.col-t-1{width:8.3333333333%}.col-t-2{width:16.6666666667%}.col-t-3{width:25%}.col-t-4{width:33.3333333333%}.col-t-5{width:41.6666666667%}.col-t-6{width:50%}.col-t-7{width:58.3333333333%}.col-t-8{width:66.6666666667%}.col-t-9{width:75%}.col-t-10{width:83.3333333333%}.col-t-11{width:91.6666666667%}.col-t-12{width:100%}.push-t-0{margin-left:0%}.push-t-1{margin-left:8.3333333333%}.push-t-2{margin-left:16.6666666667%}.push-t-3{margin-left:25%}.push-t-4{margin-left:33.3333333333%}.push-t-5{margin-left:41.6666666667%}.push-t-6{margin-left:50%}.push-t-7{margin-left:58.3333333333%}.push-t-8{margin-left:66.6666666667%}.push-t-9{margin-left:75%}.push-t-10{margin-left:83.3333333333%}.push-t-11{margin-left:91.6666666667%}.push-t-12{margin-left:100%}.pull-t-0{margin-right:0%}.pull-t-1{margin-right:8.3333333333%}.pull-t-2{margin-right:16.6666666667%}.pull-t-3{margin-right:25%}.pull-t-4{margin-right:33.3333333333%}.pull-t-5{margin-right:41.6666666667%}.pull-t-6{margin-right:50%}.pull-t-7{margin-right:58.3333333333%}.pull-t-8{margin-right:66.6666666667%}.pull-t-9{margin-right:75%}.pull-t-10{margin-right:83.3333333333%}.pull-t-11{margin-right:91.6666666667%}.pull-t-12{margin-right:100%}}@media (max-width: 576px){.col-m-0{width:0%}.col-m-1{width:8.3333333333%}.col-m-2{width:16.6666666667%}.col-m-3{width:25%}.col-m-4{width:33.3333333333%}.col-m-5{width:41.6666666667%}.col-m-6{width:50%}.col-m-7{width:58.3333333333%}.col-m-8{width:66.6666666667%}.col-m-9{width:75%}.col-m-10{width:83.3333333333%}.col-m-11{width:91.6666666667%}.col-m-12{width:100%}.push-m-0{margin-left:0%}.push-m-1{margin-left:8.3333333333%}.push-m-2{margin-left:16.6666666667%}.push-m-3{margin-left:25%}.push-m-4{margin-left:33.3333333333%}.push-m-5{margin-left:41.6666666667%}.push-m-6{margin-left:50%}.push-m-7{margin-left:58.3333333333%}.push-m-8{margin-left:66.6666666667%}.push-m-9{margin-left:75%}.push-m-10{margin-left:83.3333333333%}.push-m-11{margin-left:91.6666666667%}.push-m-12{margin-left:100%}.pull-m-0{margin-right:0%}.pull-m-1{margin-right:8.3333333333%}.pull-m-2{margin-right:16.6666666667%}.pull-m-3{margin-right:25%}.pull-m-4{margin-right:33.3333333333%}.pull-m-5{margin-right:41.6666666667%}.pull-m-6{margin-right:50%}.pull-m-7{margin-right:58.3333333333%}.pull-m-8{margin-right:66.6666666667%}.pull-m-9{margin-right:75%}.pull-m-10{margin-right:83.3333333333%}.pull-m-11{margin-right:91.6666666667%}.pull-m-12{margin-right:100%}}@media (max-width: 992px){.col-d-0{width:0%}.col-d-1{width:8.3333333333%}.col-d-2{width:16.6666666667%}.col-d-3{width:25%}.col-d-4{width:33.3333333333%}.col-d-5{width:41.6666666667%}.col-d-6{width:50%}.col-d-7{width:58.3333333333%}.col-d-8{width:66.6666666667%}.col-d-9{width:75%}.col-d-10{width:83.3333333333%}.col-d-11{width:91.6666666667%}.col-d-12{width:100%}.push-d-0{margin-left:0%}.push-d-1{margin-left:8.3333333333%}.push-d-2{margin-left:16.6666666667%}.push-d-3{margin-left:25%}.push-d-4{margin-left:33.3333333333%}.push-d-5{margin-left:41.6666666667%}.push-d-6{margin-left:50%}.push-d-7{margin-left:58.3333333333%}.push-d-8{margin-left:66.6666666667%}.push-d-9{margin-left:75%}.push-d-10{margin-left:83.3333333333%}.push-d-11{margin-left:91.6666666667%}.push-d-12{margin-left:100%}.pull-d-0{margin-right:0%}.pull-d-1{margin-right:8.3333333333%}.pull-d-2{margin-right:16.6666666667%}.pull-d-3{margin-right:25%}.pull-d-4{margin-right:33.3333333333%}.pull-d-5{margin-right:41.6666666667%}.pull-d-6{margin-right:50%}.pull-d-7{margin-right:58.3333333333%}.pull-d-8{margin-right:66.6666666667%}.pull-d-9{margin-right:75%}.pull-d-10{margin-right:83.3333333333%}.pull-d-11{margin-right:91.6666666667%}.pull-d-12{margin-right:100%}}@media (max-width: 768px){.col-t-0{width:0%}.col-t-1{width:8.3333333333%}.col-t-2{width:16.6666666667%}.col-t-3{width:25%}.col-t-4{width:33.3333333333%}.col-t-5{width:41.6666666667%}.col-t-6{width:50%}.col-t-7{width:58.3333333333%}.col-t-8{width:66.6666666667%}.col-t-9{width:75%}.col-t-10{width:83.3333333333%}.col-t-11{width:91.6666666667%}.col-t-12{width:100%}.push-t-0{margin-left:0%}.push-t-1{margin-left:8.3333333333%}.push-t-2{margin-left:16.6666666667%}.push-t-3{margin-left:25%}.push-t-4{margin-left:33.3333333333%}.push-t-5{margin-left:41.6666666667%}.push-t-6{margin-left:50%}.push-t-7{margin-left:58.3333333333%}.push-t-8{margin-left:66.6666666667%}.push-t-9{margin-left:75%}.push-t-10{margin-left:83.3333333333%}.push-t-11{margin-left:91.6666666667%}.push-t-12{margin-left:100%}.pull-t-0{margin-right:0%}.pull-t-1{margin-right:8.3333333333%}.pull-t-2{margin-right:16.6666666667%}.pull-t-3{margin-right:25%}.pull-t-4{margin-right:33.3333333333%}.pull-t-5{margin-right:41.6666666667%}.pull-t-6{margin-right:50%}.pull-t-7{margin-right:58.3333333333%}.pull-t-8{margin-right:66.6666666667%}.pull-t-9{margin-right:75%}.pull-t-10{margin-right:83.3333333333%}.pull-t-11{margin-right:91.6666666667%}.pull-t-12{margin-right:100%}}@media (max-width: 576px){.col-m-0{width:0%}.col-m-1{width:8.3333333333%}.col-m-2{width:16.6666666667%}.col-m-3{width:25%}.col-m-4{width:33.3333333333%}.col-m-5{width:41.6666666667%}.col-m-6{width:50%}.col-m-7{width:58.3333333333%}.col-m-8{width:66.6666666667%}.col-m-9{width:75%}.col-m-10{width:83.3333333333%}.col-m-11{width:91.6666666667%}.col-m-12{width:100%}.push-m-0{margin-left:0%}.push-m-1{margin-left:8.3333333333%}.push-m-2{margin-left:16.6666666667%}.push-m-3{margin-left:25%}.push-m-4{margin-left:33.3333333333%}.push-m-5{margin-left:41.6666666667%}.push-m-6{margin-left:50%}.push-m-7{margin-left:58.3333333333%}.push-m-8{margin-left:66.6666666667%}.push-m-9{margin-left:75%}.push-m-10{margin-left:83.3333333333%}.push-m-11{margin-left:91.6666666667%}.push-m-12{margin-left:100%}.pull-m-0{margin-right:0%}.pull-m-1{margin-right:8.3333333333%}.pull-m-2{margin-right:16.6666666667%}.pull-m-3{margin-right:25%}.pull-m-4{margin-right:33.3333333333%}.pull-m-5{margin-right:41.6666666667%}.pull-m-6{margin-right:50%}.pull-m-7{margin-right:58.3333333333%}.pull-m-8{margin-right:66.6666666667%}.pull-m-9{margin-right:75%}.pull-m-10{margin-right:83.3333333333%}.pull-m-11{margin-right:91.6666666667%}.pull-m-12{margin-right:100%}}@media (max-width: 992px){.col-d-0{width:0%}.col-d-1{width:8.3333333333%}.col-d-2{width:16.6666666667%}.col-d-3{width:25%}.col-d-4{width:33.3333333333%}.col-d-5{width:41.6666666667%}.col-d-6{width:50%}.col-d-7{width:58.3333333333%}.col-d-8{width:66.6666666667%}.col-d-9{width:75%}.col-d-10{width:83.3333333333%}.col-d-11{width:91.6666666667%}.col-d-12{width:100%}.push-d-0{margin-left:0%}.push-d-1{margin-left:8.3333333333%}.push-d-2{margin-left:16.6666666667%}.push-d-3{margin-left:25%}.push-d-4{margin-left:33.3333333333%}.push-d-5{margin-left:41.6666666667%}.push-d-6{margin-left:50%}.push-d-7{margin-left:58.3333333333%}.push-d-8{margin-left:66.6666666667%}.push-d-9{margin-left:75%}.push-d-10{margin-left:83.3333333333%}.push-d-11{margin-left:91.6666666667%}.push-d-12{margin-left:100%}.pull-d-0{margin-right:0%}.pull-d-1{margin-right:8.3333333333%}.pull-d-2{margin-right:16.6666666667%}.pull-d-3{margin-right:25%}.pull-d-4{margin-right:33.3333333333%}.pull-d-5{margin-right:41.6666666667%}.pull-d-6{margin-right:50%}.pull-d-7{margin-right:58.3333333333%}.pull-d-8{margin-right:66.6666666667%}.pull-d-9{margin-right:75%}.pull-d-10{margin-right:83.3333333333%}.pull-d-11{margin-right:91.6666666667%}.pull-d-12{margin-right:100%}}@media (max-width: 768px){.col-t-0{width:0%}.col-t-1{width:8.3333333333%}.col-t-2{width:16.6666666667%}.col-t-3{width:25%}.col-t-4{width:33.3333333333%}.col-t-5{width:41.6666666667%}.col-t-6{width:50%}.col-t-7{width:58.3333333333%}.col-t-8{width:66.6666666667%}.col-t-9{width:75%}.col-t-10{width:83.3333333333%}.col-t-11{width:91.6666666667%}.col-t-12{width:100%}.push-t-0{margin-left:0%}.push-t-1{margin-left:8.3333333333%}.push-t-2{margin-left:16.6666666667%}.push-t-3{margin-left:25%}.push-t-4{margin-left:33.3333333333%}.push-t-5{margin-left:41.6666666667%}.push-t-6{margin-left:50%}.push-t-7{margin-left:58.3333333333%}.push-t-8{margin-left:66.6666666667%}.push-t-9{margin-left:75%}.push-t-10{margin-left:83.3333333333%}.push-t-11{margin-left:91.6666666667%}.push-t-12{margin-left:100%}.pull-t-0{margin-right:0%}.pull-t-1{margin-right:8.3333333333%}.pull-t-2{margin-right:16.6666666667%}.pull-t-3{margin-right:25%}.pull-t-4{margin-right:33.3333333333%}.pull-t-5{margin-right:41.6666666667%}.pull-t-6{margin-right:50%}.pull-t-7{margin-right:58.3333333333%}.pull-t-8{margin-right:66.6666666667%}.pull-t-9{margin-right:75%}.pull-t-10{margin-right:83.3333333333%}.pull-t-11{margin-right:91.6666666667%}.pull-t-12{margin-right:100%}}@media (max-width: 576px){.col-m-0{width:0%}.col-m-1{width:8.3333333333%}.col-m-2{width:16.6666666667%}.col-m-3{width:25%}.col-m-4{width:33.3333333333%}.col-m-5{width:41.6666666667%}.col-m-6{width:50%}.col-m-7{width:58.3333333333%}.col-m-8{width:66.6666666667%}.col-m-9{width:75%}.col-m-10{width:83.3333333333%}.col-m-11{width:91.6666666667%}.col-m-12{width:100%}.push-m-0{margin-left:0%}.push-m-1{margin-left:8.3333333333%}.push-m-2{margin-left:16.6666666667%}.push-m-3{margin-left:25%}.push-m-4{margin-left:33.3333333333%}.push-m-5{margin-left:41.6666666667%}.push-m-6{margin-left:50%}.push-m-7{margin-left:58.3333333333%}.push-m-8{margin-left:66.6666666667%}.push-m-9{margin-left:75%}.push-m-10{margin-left:83.3333333333%}.push-m-11{margin-left:91.6666666667%}.push-m-12{margin-left:100%}.pull-m-0{margin-right:0%}.pull-m-1{margin-right:8.3333333333%}.pull-m-2{margin-right:16.6666666667%}.pull-m-3{margin-right:25%}.pull-m-4{margin-right:33.3333333333%}.pull-m-5{margin-right:41.6666666667%}.pull-m-6{margin-right:50%}.pull-m-7{margin-right:58.3333333333%}.pull-m-8{margin-right:66.6666666667%}.pull-m-9{margin-right:75%}.pull-m-10{margin-right:83.3333333333%}.pull-m-11{margin-right:91.6666666667%}.pull-m-12{margin-right:100%}}img[data-action="zoom"]{cursor:pointer;cursor:-webkit-zoom-in;cursor:-moz-zoom-in}.zoom-img,.zoom-img-wrap{position:relative;z-index:999;-webkit-transition:all 300ms;-o-transition:all 300ms;transition:all 300ms}img.zoom-img{cursor:pointer;cursor:-webkit-zoom-out;cursor:-moz-zoom-out}.zoom-overlay{z-index:420;background:#0f0e15;position:fixed;top:0;left:0;right:0;bottom:0;pointer-events:none;opacity:0;-webkit-transition:opacity 300ms;-o-transition:opacity 300ms;transition:opacity 300ms}@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none){.zoom-overlay{-webkit-backdrop-filter:saturate(180%) blur(24px);backdrop-filter:saturate(180%) blur(24px);background:rgba(15,14,21,0.8)}}.zoom-overlay-open .zoom-overlay{opacity:1}.zoom-overlay-open,.zoom-overlay-transitioning{cursor:default}.animate{animation:animateElement cubic-bezier(0.3, 0.45, 0.45, 0.95) 0.75s;animation-duration:0.75s;animation-iteration-count:1;transition:transform .2s}@keyframes animateElement{0%{opacity:0;transform:translate(0px, 50px)}100%{opacity:1;transform:translate(0px, 0px)}}*,*::after,*::before{box-sizing:border-box}body{font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",sans-serif;font-size:18px;line-height:1.7;color:#eee;background-color:#0f0e15;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overflow-x:hidden}body.is-in::after{visibility:hidden;opacity:0;pointer-events:none}body::after{content:"";position:fixed;left:0;top:0;width:100%;height:100%;background-color:#09080f;z-index:999;transition:1s}body input,body textarea{border:1px solid #eee;outline:none}@media only screen and (max-width: 576px){body{font-size:16px;line-height:29px}}::placeholder{color:#aaa}*::selection{color:#fff;background-color:rgba(255,190,152,0.7)}h1,h2,h3,h4,h5,h6{font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",sans-serif;font-weight:900;line-height:1.4em;letter-spacing:-1px;color:#eee}h1{font-size:36px}h2{font-size:28px}h3{font-size:24px}h4{font-size:20px}h5{font-size:18px}h6{font-size:16px}blockquote{position:relative;padding:34px 20px 34px 64px;margin-bottom:0;font-size:28px;line-height:36px;font-weight:900;color:#fff}blockquote:before{content:'\201C';position:absolute;top:0.59em;left:-0.01em;font-size:4em;color:#ffbe98}blockquote p{margin-bottom:20px}blockquote cite{font-size:16px;font-style:normal;font-weight:700;color:#eee}blockquote cite:before{content:'\2014' '\00a0'}@media only screen and (max-width: 576px){blockquote{padding:20px 20px 20px 48px;font-size:20px;line-height:28px}}pre{overflow:auto;padding:20px;font-size:14px;white-space:pre-wrap;word-wrap:break-word;word-break:break-all}code[class*=language-],pre[class*=language-]{white-space:pre-wrap;word-break:break-all;line-height:inherit}img,.zoom-img-wrap{max-width:100%;width:100%;height:auto;border-radius:14px;vertical-align:middle}img+em,.zoom-img-wrap+em{display:inline-block;width:100%;padding:20px 0 0;font-size:12px;font-style:normal;line-height:1;text-align:center;color:#eee}a{text-decoration:none;color:#eee;transition:all 0.2s}a:hover{color:#ffbe98}hr{display:block;width:100%;height:1px;margin:64px 0;border:0;background:#fff}.table-container{display:block;max-width:100%;overflow-x:auto}table{font-size:12px;color:rgba(238,238,238,0.7);width:100%;border-width:1px;border-color:#09080f;border-collapse:collapse}table th{padding:12px;font-size:16px;text-align:left;border:1px solid #09080f;color:#fff;background-color:#17151E}table tr{background-color:#09080f;transition:all .3s ease}table tr:nth-child(even){background-color:transparent}table td{padding:12px;font-size:14px;border:1px solid #09080f}table tr:hover{color:#fff}.gallery-box{margin-bottom:30px}.gallery-box em{display:inline-block;width:100%;padding:20px 0 0;font-size:12px;font-style:normal;line-height:1;text-align:center;color:#eee}.gallery-box em a{border-bottom:2px solid rgba(238,238,238,0.1)}.gallery-box em a:hover{border-color:#ffbe98;color:#eee;text-decoration:none}.gallery{display:grid;grid-template-columns:repeat(3, auto);justify-content:center;align-content:center;grid-gap:10px}.gallery img{width:100%;height:auto}.lazy{opacity:0;transition:0.4s ease}.lazy.loaded{opacity:1}.hero{position:relative;overflow:hidden;background-color:#09080f}@media only screen and (max-width: 576px){.hero{box-shadow:none}}.hero__inner::before{content:"";display:block;position:absolute;top:0;bottom:0;left:0;right:0;z-index:1;background:linear-gradient(180deg, rgba(15,14,21,0.5) 0%, #0f0e15 100%)}.hero__image{height:100vh;user-select:none;background-color:#09080f}.hero__image img{position:absolute;top:0px;width:100%;height:100vh;object-fit:cover}@media only screen and (max-width: 992px){.hero__image{min-height:620px}}@media only screen and (max-width: 768px){.hero__image{min-height:500px}}@media only screen and (max-width: 576px){.hero__image{min-height:400px}}.hero__image{min-height:664px;user-select:none;background-color:#09080f}.hero__image img{position:absolute;top:0px;width:100%;height:100%;object-fit:cover}.hero__image video{position:absolute;top:0px;width:100%;height:100%;object-fit:cover}@media only screen and (max-width: 992px){.hero__image{min-height:620px}}@media only screen and (max-width: 768px){.hero__image{min-height:500px}}@media only screen and (max-width: 576px){.hero__image{min-height:400px}}.hero__content{position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);z-index:1;width:100%;max-width:130vh;padding:0 2vh;text-align:center}.hero__title{font-size:3vw;margin:0 0 3vh;line-height:1;color:#fff}@media only screen and (max-width: 576px){.hero__title{font-size:9vw;margin:0 14vw 5vw}}.hero__desc{font-size:1.9vh;color:#aaa;margin:0}@media only screen and (max-width: 576px){.hero__desc{font-size:1.9vh;line-height:21px}}.hero-without-image{margin:192px 0 96px}.hero-without-image .hero-inner{display:flex;align-items:center;justify-content:center}.hero-without-image .hero-content{width:100%;max-width:650px;padding:0 20px;text-align:center}@media only screen and (max-width: 576px){.hero-without-image{margin:144px 0 48px}}.top{position:fixed;bottom:25px;right:-100px;z-index:5;width:40px;height:40px;line-height:40px;text-align:center;border-radius:8px;background-color:#09080f;color:#fff;cursor:pointer;transition:all .25s ease}.top:hover{color:#09080f;background:#ffbe98}.top.is-active{right:30px}@media only screen and (max-width: 768px){.top{bottom:15px}.top.is-active{right:25px}}.header{width:100%;margin:60px 0;transition:all 0.2s;color:#fff}.header.header--top{position:absolute;top:0;z-index:100}@media only screen and (max-width: 992px){.header{margin:32px 0}}.header__inner{position:relative;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}.logo__link{font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",sans-serif;font-size:28px;line-height:1;font-weight:900;vertical-align:middle;color:#eee;text-transform:uppercase;text-decoration:none;letter-spacing:-1px}.logo__link:hover{color:#ffbe98}.logo__image{max-height:40px}.main-nav{width:100%;max-width:1300px;margin:0 auto}.main-nav__box{display:flex;align-items:center;width:80%;padding-top:200px;margin:0 auto}.main-nav__box .nav__icon-close{position:absolute;top:20px;right:40px;z-index:5;display:flex;align-items:center;justify-content:center;font-size:30px;width:40px;height:40px;text-align:center;line-height:40px;color:rgba(255,255,255,0.5);transition:all .25s ease;cursor:pointer}.main-nav__box .nav__icon-close:hover{color:#fff}@media only screen and (max-width: 992px){.main-nav__box{padding-top:100px}.main-nav__box .dropdown__item{display:none}.main-nav__box .nav__icon-close{top:22px;right:42px}}@media only screen and (max-width: 768px){.main-nav__box{padding-top:100px}.main-nav__box .dropdown__item{display:none}.main-nav__box .nav__icon-close{top:22px;right:42px}}@media only screen and (max-width: 576px){.main-nav__box{width:90%}}.navigation{display:flex;align-items:center}.top-nav .nav__list .nav__item{display:inline-block;margin-right:40px}.top-nav .nav__list .nav__item:last-child{margin-right:0}.top-nav .nav__list .nav__item .nav__link{position:relative;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;text-decoration:none;color:#eee}.top-nav .nav__list .nav__item .nav__link:hover{color:#ffbe98}@media only screen and (max-width: 992px){.top-nav{display:none}}.nav__dropdown{position:relative;display:flex;justify-content:center;align-items:center}.nav__dropdown .nav__link{position:relative;display:inline-block}.nav__dropdown .nav__link:after{content:"▼";font-size:12px;margin-left:5px}.nav__dropdown .dropdown__menu-wrapper{position:absolute;top:100%;left:50%;transform:translateX(-50%);display:flex;justify-content:center}.nav__dropdown .dropdown__menu-wrapper .dropdown__menu{list-style:none;padding:0;margin:0;display:none;flex-direction:column;align-items:center}.nav__dropdown .dropdown__menu-wrapper .dropdown__menu .dropdown__item{width:100%}.nav__dropdown .dropdown__menu-wrapper .dropdown__menu .dropdown__item .dropdown__link{white-space:nowrap;display:block;text-decoration:none;text-align:center;color:#eee;font-size:11px;background-color:transparent}.nav__dropdown .dropdown__menu-wrapper .dropdown__menu .dropdown__item .dropdown__link:hover{background-color:transparent;color:#ffbe98}.nav__dropdown:hover .dropdown__menu{display:block}.mobile-nav .nav__list .nav__item{display:block;margin-bottom:36px;text-align:center}.mobile-nav .nav__list .nav__item:last-child{margin-bottom:0}.mobile-nav .nav__list .nav__item .nav__link{position:relative;font-size:18px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#eee}.mobile-nav .nav__list .nav__item .nav__link:hover{color:#ffbe98}@media only screen and (max-width: 576px){.mobile-nav .nav__list .nav__item{margin-bottom:28px}}.nav-buttons{display:flex;align-items:center;font-size:24px;color:#eee}.nav-buttons .search-button{display:flex;align-items:center;cursor:pointer;transition:all 0.2s}.nav-buttons .search-button span{transition:all 0.2s}.nav-buttons .search-button:hover span{color:#ffbe98}.nav-buttons .search-button span{display:block;margin-left:8px;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase}@media only screen and (max-width: 992px){.nav-buttons .search-button span{display:none}}.nav-buttons .nav__icon-menu{display:none;margin-right:16px}@media only screen and (max-width: 992px){.nav-buttons .nav__icon-menu{display:block}}.nav-buttons .nav__icon{cursor:pointer}.menu-overlay{position:fixed;top:0;left:0;right:0;bottom:0;z-index:100;opacity:0;visibility:hidden;background-color:#09080f;transition:all 0.5s ease-in-out}.menu-overlay.is-open{opacity:1;visibility:visible}@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none){.menu-overlay{-webkit-backdrop-filter:saturate(180%) blur(24px);backdrop-filter:saturate(180%) blur(24px);background-color:rgba(9,8,15,0.9)}}@media only screen and (min-width: 992px){.menu-overlay{display:none}}.nav-grid{width:100%;height:75vh;overflow-y:auto}.nav-grid__item{margin-bottom:30px}@media only screen and (max-width: 768px){.nav-grid__item{height:auto}}.nav-grid__title{position:relative;margin-bottom:48px;padding-bottom:15px;font-size:40px;text-align:center;color:#eee}.nav-grid__title::after{content:"";position:absolute;left:50%;bottom:0;transform:translate(-50%, -50%);display:block;width:25px;height:2px;background-color:#fff}@media only screen and (max-width: 768px){.nav-grid__title{margin-bottom:30px}}.nav__list .dropdown__menu{display:none}.nav__list .nav__item:hover .dropdown__menu{display:block}@media only screen and (max-width: 768px){.nav__list .nav__item{display:block}.nav__list .nav__item .nav__link{display:block;padding:10px 0}.nav__list .nav__item .dropdown__menu{display:block;padding-left:20px;margin-top:0}.nav__list .nav__dropdown .dropdown__menu{display:block}.nav__list .nav__dropdown .dropdown__menu .dropdown__item .dropdown__link{display:block;padding:10px 0}}.search{position:fixed;top:0;left:0;right:0;bottom:0;z-index:100;overflow:auto;opacity:0;visibility:hidden;background-color:#09080f;transition:all 0.5s ease-in-out}.search.is-visible{opacity:1;visibility:visible}@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none){.search{-webkit-backdrop-filter:saturate(180%) blur(24px);backdrop-filter:saturate(180%) blur(24px);background-color:rgba(9,8,15,0.9)}}.search__box{position:relative;max-width:540px;width:100%;margin:0 auto;padding-top:140px}.search__box .search__close{position:absolute;top:50%;right:24px;transform:translateY(-50%);font-size:30px;line-height:1;color:rgba(238,238,238,0.5);transition:all .25s;cursor:pointer}.search__box .search__close:hover{color:#eee}@media only screen and (max-width: 768px){.search__box{width:80%;padding-top:100px}}@media only screen and (max-width: 576px){.search__box{width:90%}}.search__group{position:relative;margin-bottom:64px}.search__group .search__text{width:100%;height:auto;padding:16px 24px;font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",sans-serif;font-size:24px;font-weight:900;line-height:42px;border-radius:8px;border:4px solid rgba(238,238,238,0.1);transition:all .3s;color:#fff;background-color:transparent}.search__group .search__text::-webkit-input-placeholder{font-weight:900;color:rgba(238,238,238,0.8)}.search__group .search__text::placeholder{font-weight:900;color:rgba(238,238,238,0.8)}.search__group .search__text::-ms-clear{display:none}.search__group .search__text:focus{color:#eee;background:#09080f}@media only screen and (max-width: 576px){.search__group .search__text{font-size:26px}}.search-results-list .no-results{width:100%;list-style:none}.search-results-list .no-results h3{font-size:28px;text-align:center}.load-more{margin:0 auto}.load-more-section{margin:30px auto;text-align:center}@media only screen and (max-width: 576px){.load-more-section{margin:20px auto}}.footer-widgets{padding:64px 0 32px}.footer-widgets .row .col{flex-grow:1}@media only screen and (max-width: 768px){.footer-widgets{padding:48px 0 0}}.widget{margin-bottom:40px}@media only screen and (max-width: 768px){.widget{margin-bottom:64px}}.widget__title{position:relative;padding-left:8px;margin-bottom:36px;font-size:24px;line-height:1;color:#fff}.widget__title::after{content:"";position:absolute;left:0;top:50%;z-index:-1;transform:translateY(-50%);display:block;width:106px;height:38px;border-radius:4px 0px 0px 4px}@media only screen and (max-width: 992px){.widget__title{font-size:24px}}.recent-posts{display:flex;align-items:center;margin-bottom:20px}.recent-posts:last-child{margin-bottom:0}@media only screen and (max-width: 360px){.recent-posts{flex-wrap:wrap;margin-bottom:32px}}.recent-posts__image{position:relative;display:block;width:100%;max-width:174px;height:144px;margin-right:20px;border-radius:16px;overflow:hidden;background:#09080f}.recent-posts__image img{position:absolute;top:0;left:0;width:100%;height:100%;border-radius:16px;object-fit:cover}@media only screen and (max-width: 360px){.recent-posts__image{height:auto;max-width:100%;padding-top:56.6%;margin:0 0 20px}}.recent-posts__content .recent-posts__title{font-size:18px;margin:8px 0}.recent-posts__content .article__author-image{width:28px;height:28px}.tag__cloud{display:flex;flex-wrap:wrap}.tag__cloud a{display:inline-block;padding:8px 16px;margin:0 5px 5px 0;font-size:12px;line-height:10px;font-weight:700;border:3px solid rgba(255,255,255,0.1);border-radius:24px;color:#aaa}.tag__cloud a:hover{border-color:#ffbe98;color:#fff}.subscribe-subtitle{width:100%;margin-bottom:24px;font-size:16px;line-height:24px;color:#aaa}.subscribe-group-top{display:flex;align-items:center}.subscribe-group-top .subscribe-email{position:relative;width:100%;height:56px;padding:20px;font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",sans-serif;font-size:14px;line-height:20px;font-weight:700;border-radius:8px;color:#fff;background-color:#17151E;border:2px solid transparent;outline:0;-webkit-appearance:none;box-sizing:border-box;transition:border-color .2s ease-in-out;cursor:text}.subscribe-group-top .subscribe-email::placeholder{color:#eee}.subscribe-group-top .subscribe-email:focus{color:#fff;border-color:#ffbe98}.subscribe-group-top .subscribe-button{margin-left:10px}.footer{position:relative;padding:64px 0;border-top:2px solid #09080f}.footer .footer__inner{display:flex;justify-content:space-between;align-items:center}@media only screen and (max-width: 992px){.footer .footer__inner{flex-direction:column}.footer .footer__inner .copyright{order:1}}@media only screen and (max-width: 768px){.footer .footer__inner{align-items:flex-start}}.copyright{font-size:13px;color:#aaa}.copyright a{font-weight:500;color:#fff}.copyright a:hover{color:#ffbe98}.social{text-align:center}.social .social__list{display:flex;flex-wrap:wrap;justify-content:center;align-items:center}.social .social__item{display:inline-block;margin-left:8px}.social .social__item:first-child{margin-left:0}.social .social__link{display:flex;justify-content:center;align-items:center;width:40px;height:40px;font-size:16px;line-height:40px;border-radius:8px;color:#fff;background-color:#17151E}.social .social__link:hover{color:#09080f;background-color:#ffbe98}@media only screen and (max-width: 992px){.social{margin-bottom:5px}.social .social__item{margin-bottom:10px}.social .social__link{width:30px;height:30px;line-height:30px;font-size:16px}}.button{display:inline-block;white-space:nowrap;vertical-align:middle;font:inherit;border:none;border-radius:8px;outline:none;-webkit-appearance:none;text-align:center;text-decoration:none;color:#fff;transition:all 0.2s ease;cursor:pointer}.button:hover{color:#fff}.button--primary{padding:20px 40px;font-size:16px;font-weight:700;line-height:1;background-color:#17151E}.button--primary:hover{color:#09080f;background-color:#ffae7f}.button--middle{position:relative;padding:24px 48px;width:100%;max-width:412px;font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",sans-serif;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;transition:all .2s ease;background-color:#09080f}.button--middle:hover{background-color:#17151E}.button--big{display:block;width:100%}.article{align-items:stretch;flex-grow:1;min-height:340px;margin-bottom:32px;transition:transform .2s ease}.article::after{content:"";display:table;padding-top:25%}.article:hover{transform:translateY(-5px)}.article--big::after{padding-top:35%}@media only screen and (max-width: 992px){.article--big::after{padding-top:25%}}@media only screen and (max-width: 576px){.article{min-height:280px}}.article__inner{position:relative;display:flex;width:100%;height:100%;border-radius:16px;overflow:hidden;box-shadow:0 5px 10px 0 rgba(0,0,0,0.5);background-color:#09080f}.article__inner .featured-post{position:absolute;top:20px;right:32px;z-index:10;padding:2px 4px;font-size:20px;border-radius:4px;color:#aaa;background:rgba(255,255,255,0.08);pointer-events:none}@media only screen and (max-width: 576px){.article__inner .featured-post{right:20px}}.article__title{margin:12px 0 12px;font-size:28px;line-height:1}.article__title a{color:#eee}@media only screen and (max-width: 576px){.article__title{font-size:24px}}.article__excerpt{margin-bottom:12px;font-size:14px;line-height:17px;color:#aaa}@media only screen and (max-width: 576px){.article__excerpt{font-size:13px}}.article__image{position:absolute;display:block;width:100%;height:100%;overflow:hidden;user-select:none;background-color:#09080f}.article__image::after{content:"";display:block;position:absolute;top:0;left:0;width:100%;height:100%;background-color:rgba(15,14,21,0.6);pointer-events:none}.article__image img{position:absolute;top:0;width:100%;height:100%;object-fit:cover;border-radius:16px;pointer-events:none}.article__content{z-index:1;width:100%;margin-top:auto;padding:0 32px 32px;pointer-events:none}@media only screen and (max-width: 576px){.article__content{padding:20px}}.article__meta{line-height:12px}.article__meta .article__date,.article__meta .article__minutes{font-size:12px;line-height:1;font-weight:500}.article__meta .article__date{color:#aaa}.article__bottom{display:flex;align-items:center;font-size:12px;line-height:18px;font-weight:500;color:#fff}.article__bottom a{pointer-events:all}.article-tags .article__tag{display:inline-block;padding:4px 8px;margin:2px 0;font-size:12px;line-height:10px;font-weight:500;letter-spacing:-0.5px;border:2px solid rgba(255,255,255,0.4);border-radius:24px;color:#aaa}.article-tags .article__tag:hover{color:#fff;border-color:#ffbe98}.article__author{float:left;flex-shrink:0}.article__author-image{position:relative;display:inline-block;width:36px;height:36px;padding:3px;margin-right:8px;border:2px solid #ffbe98;border-radius:50%;overflow:hidden}.article__author-image img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover}.article__author-link{font-size:12px;color:#fff}.article__author-link:hover{color:#fff}.article__author span{color:rgba(255,255,255,0.8)}.post,.page{position:relative;max-width:1080px;margin:0 auto}.post-head{margin-bottom:64px}.post-head .row{align-items:center}.post-head .post-head__box{margin-left:32px}@media only screen and (max-width: 992px){.post-head .post-head__box{margin-left:16px}}@media only screen and (max-width: 768px){.post-head{margin-bottom:40px}.post-head .post-head__box{margin-left:0}.post-head .row{flex-direction:column}}.post-image{position:absolute;top:0;left:0;width:100%;height:100%;border-radius:16px;object-fit:cover}.image-box{position:relative;padding-top:90%;min-height:280px;border-radius:16px;overflow:hidden;box-shadow:0 5px 10px 0px rgba(0,0,0,0.15);background-color:#09080f}@media only screen and (max-width: 768px){.image-box{padding-top:65%;margin-bottom:40px}}.post__meta{line-height:13px}.post__meta .post__date,.post__meta .post__minutes{font-size:13px;line-height:1;font-weight:500}.post__meta .post__date{color:#aaa}.post__title{margin:20px 0 20px;font-size:calc(1.5vw + 1.5vh + .5vmin);line-height:1}@media only screen and (max-width: 1200px){.post__title{font-size:40px}}@media only screen and (max-width: 576px){.post__title{font-size:32px}}.post__bottom{display:flex;align-items:center;font-size:13px;line-height:30px;font-weight:500;color:#fff}.post-tags .post__tag{padding:4px 8px;margin:2px 0;font-size:12px;line-height:10px;font-weight:700;border:2px solid rgba(255,255,255,0.2);border-radius:24px;color:#aaa}.post-tags .post__tag:hover{color:#fff;border-color:#ffbe98}.post__author{float:left;flex-shrink:0}.post__author-image{position:relative;display:inline-block;width:36px;height:36px;padding:3px;margin-right:8px;border:2px solid #ffbe98;border-radius:50%;overflow:hidden}.post__author-image img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover}.post__author-link{font-size:13px;color:#fff}.post__author-link:hover{color:#fff}.post__author span{color:rgba(255,255,255,0.8)}.post__content,.page__content{color:#aaa}.post__content a,.page__content a{border-bottom:2px solid rgba(238,238,238,0.1)}.post__content a:hover,.page__content a:hover{border-color:#ffbe98;color:#eee;text-decoration:none}.post__share{display:flex;justify-content:center;margin:64px 0}.post__share .share__list{display:inline-flex;justify-content:center;align-items:center;border-radius:16px;background:#17151E}.post__share .share__list .share__link{position:relative;display:flex;justify-content:center;align-items:center;padding:28px 24px;font-size:20px;color:#eee;transition:all .2s}.post__share .share__list .share__link:first-child{padding-left:48px}.post__share .share__list .share__link:first-child::after{content:none}.post__share .share__list .share__link:last-child{padding-right:48px}.post__share .share__list .share__link::after{content:"";position:absolute;left:0;display:block;width:1px;height:12px;background:rgba(238,238,238,0.08)}.post__share .share__list .share__link:hover{color:#ffbe98}@media only screen and (max-width: 576px){.post__share{margin:48px 0}.post__share .share__list .share__link{padding:24px 20px}.post__share .share__list .share__link:first-child{padding-left:40px}.post__share .share__list .share__link:last-child{padding-right:40px}}.post__navigation{display:flex;justify-content:space-between;margin-bottom:64px;box-shadow:0 5px 10px 0 rgba(0,0,0,0.5);border-radius:16px}.post__navigation .prev,.post__navigation .prev img{border-radius:16px 0 0 16px}.post__navigation .next,.post__navigation .next img{border-radius:0 16px 16px 0}.post__navigation .prev,.post__navigation .next{position:relative;display:flex;align-items:flex-end;width:100%;min-height:240px;padding:0 32px 32px;overflow:hidden;background-size:cover;background-position:center;background-repeat:no-repeat;background-color:#09080f;user-select:none}.post__navigation .prev::after,.post__navigation .next::after{content:"";display:block;position:absolute;top:0;left:0;width:100%;height:100%;background-color:rgba(9,8,15,0.6);pointer-events:none;transition:.25s}.post__navigation .prev:hover::after,.post__navigation .next:hover::after{background-color:rgba(9,8,15,0.7)}.post__navigation .prev .post__nav,.post__navigation .next .post__nav{display:inline-block;margin-bottom:8px;font-size:12px;font-weight:500;text-transform:uppercase;color:#eee}.post__navigation .prev .post__nav-image,.post__navigation .next .post__nav-image{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover}.post__navigation .prev .post__nav-box,.post__navigation .next .post__nav-box{position:relative;z-index:1;width:100%}.post__navigation .prev .post__nav__prev i,.post__navigation .next .post__nav__prev i{margin-right:4px}.post__navigation .prev .post__nav__next i,.post__navigation .next .post__nav__next i{margin-left:4px}.post__navigation .prev .post__nav__title,.post__navigation .next .post__nav__title{margin-bottom:0;font-size:24px;line-height:1}.post__navigation .prev .post__nav__title a,.post__navigation .next .post__nav__title a{color:#eee}.post__navigation .next{text-align:right;margin-left:auto}@media only screen and (max-width: 768px){.post__navigation{flex-wrap:wrap;box-shadow:none}.post__navigation .prev,.post__navigation .next{width:100%;border-radius:16px;box-shadow:0 5px 10px 0 rgba(0,0,0,0.5)}.post__navigation .prev img,.post__navigation .next img{border-radius:16px}.post__navigation .prev{margin-bottom:20px}}@media only screen and (max-width: 576px){.post__navigation{margin-bottom:48px}}.related-posts{display:none}.related-posts.is-related{display:block}.related-posts .related-title{position:relative;padding-left:8px;margin-bottom:36px;font-size:24px;line-height:1;color:#fff}.related-posts .related-title::after{content:"";position:absolute;left:0;top:50%;z-index:-1;transform:translateY(-50%);display:block;width:106px;height:38px;border-radius:4px 0px 0px 4px}@media only screen and (max-width: 992px){.related-posts .related-title{font-size:24px}}.disqus-inner{border-radius:16px;background:#17151E}.post-comments{max-width:824px;padding:64px 32px;margin:0 auto}@media only screen and (max-width: 576px){.post-comments{padding:48px 32px}}.archive-box{position:relative;margin:50px 0 80px;text-align:center}@media only screen and (max-width: 576px){.archive-box{margin:20px 0 50px}}.archive-meta{font-size:16px;color:rgba(238,238,238,0.6)}.archive-title{position:relative;margin:0;font-size:47px;line-height:57px}@media only screen and (max-width: 576px){.archive-title{font-size:40px;line-height:52px}}.archive-description{max-width:600px;margin:10px auto 0;font-size:16px;line-height:32px}@media only screen and (max-width: 576px){.archive-description{margin:5px auto 0;line-height:28px}}.form__group{margin-bottom:20px}.form__input{width:100%;padding:20px;font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",sans-serif;font-size:16px;font-weight:700;border:2px solid transparent;border-radius:8px;color:#eee;background:#17151E;transition:border-color .2s ease-in-out}.form__input::placeholder{color:#fff}.form__input:focus{border-color:#ffbe98}textarea{resize:vertical}
+
+  </style>
+</head>
+
+  <body>    
+    
+
+<!-- begin header -->
+<header class="header ">
+  <div class="container">
+    <div class="row">
+      <div class="header__inner col col-12">
+
+      <div class="logo">
+        <a class="logo__link" href="/">
+        
+          SASM
+        
+        </a>
+      </div>
+        
+      <div class="menu-overlay">
+        <nav class="main-nav">
+          <div class="main-nav__box">
+            <div class="nav__icon-close">
+              <i class="ion ion-md-close"></i>
+            </div>
+            <div class="nav-grid">
+              <div class="nav-grid__item">
+                <h2 class="nav-grid__title">Menu</h2>
+                <div class="mobile-nav">
+                  <ul class="nav__list list-reset">
+  <li class="nav__item">
+    <a href="/" class="nav__link">Home</a>
+  </li>
+  <li class="nav__item nav__dropdown">
+    <span class="nav__link">Report</span>
+    <div class="dropdown__menu-wrapper">
+      <ul class="dropdown__menu list-reset">
+        <li class="dropdown__item">
+          <a href="/2024/10/25/2024-사이버-공격-동향-연구/" class="dropdown__link">2024 사이버 공격 동향 연구</a>
+        </li>
+        <li class="dropdown__item">
+          <a href="/2024/10/25/MITRE-ATT&CK-프레임워크를-기반한-해킹-그룹-공격-사례-연구/" class="dropdown__link">MITRE ATT&CK 프레임워크를 기반한 해킹 그룹 공격 사례 연구</a>
+        </li>
+      </ul>
+    </div>
+  </li>
+  <li class="nav__item">
+    <a href="/2024/10/25/seminar-ctf/" class="nav__link">team activities</a>
+  </li>
+  <li class="nav__item">
+    <a href="https://github.com/OSS-SASM/SASM" class="nav__link">Project</a>
+  </li>
+  <li class="nav__item">
+    <a href="/contact/" class="nav__link">Contact</a>
+  </li>
+</ul>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <div class="navigation">
+        <div class="top-nav">
+          <ul class="nav__list list-reset">
+  <li class="nav__item">
+    <a href="/" class="nav__link">Home</a>
+  </li>
+  <li class="nav__item nav__dropdown">
+    <span class="nav__link">Report</span>
+    <div class="dropdown__menu-wrapper">
+      <ul class="dropdown__menu list-reset">
+        <li class="dropdown__item">
+          <a href="/2024/10/25/2024-사이버-공격-동향-연구/" class="dropdown__link">2024 사이버 공격 동향 연구</a>
+        </li>
+        <li class="dropdown__item">
+          <a href="/2024/10/25/MITRE-ATT&CK-프레임워크를-기반한-해킹-그룹-공격-사례-연구/" class="dropdown__link">MITRE ATT&CK 프레임워크를 기반한 해킹 그룹 공격 사례 연구</a>
+        </li>
+      </ul>
+    </div>
+  </li>
+  <li class="nav__item">
+    <a href="/2024/10/25/seminar-ctf/" class="nav__link">team activities</a>
+  </li>
+  <li class="nav__item">
+    <a href="https://github.com/OSS-SASM/SASM" class="nav__link">Project</a>
+  </li>
+  <li class="nav__item">
+    <a href="/contact/" class="nav__link">Contact</a>
+  </li>
+</ul>
+
+        </div>
+      </div>
+
+      <div class="nav-buttons">
+        <i class="nav__icon nav__icon-menu ion ion-md-menu"></i>
+        <div class="search-button">
+          <i class="nav__icon nav__icon-search ion ion-md-search"></i>
+          <span>Search</span>
+        </div>
+      </div>
+
+      </div>
+    </div>
+  </div>
+</header>
+<!-- end header -->
+
+<!-- begin search -->
+<div class="search">
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+        <div class="search__box">
+          <div class="search__group">
+            <div class="search__close">
+              <i class="ion ion-md-close"></i>
+            </div>
+            <label for="js-search-input" class="screen-reader-text">Search for Blog</label>
+            <input type="text" id="js-search-input" class="search__text" autocomplete="off" placeholder="Type to search...">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row search-results-list" id="js-results-container"></div>
+  </div>
+
+</div>
+<!-- end search -->
+
+    <!-- begin content -->
+    <main class="content" aria-label="Content"><div class="post-head">
+  <div class="container">
+    <div class="row">
+      
+      <div class="col col-6 col-t-12">
+        <div class="image-box">
+          <img class="post-image lazy" data-src="/images/posts/2024-10-25-2024-사이버-공격-동향-연구.jpg" alt="2024 사이버 공격 동향 연구">
+        </div>
+      </div>
+      
+  
+      <div class="col col-6 col-t-12">
+        <div class="post-head__box">
+        
+          <div class="post__meta">
+            <span class="post__minutes">
+              
+              
+                49 min read
+              
+              <time class="post__date"
+                datetime="2024-10-25T10:00:00+00:00">2024-10-25 10:00</time>
+            </span>
+          </div>
+        
+          <h2 class="post__title">2024 사이버 공격 동향 연구</h2>
+        
+          <div class="post__bottom">
+        
+            <div class="post__author">
+              <img class="post__author-image"
+                  src="/images/오석재.png" alt="SeokJae Oh's Picture"></a>
+            </div>
+        
+            <div class="post__bottom-meta">
+              <span class="post__author-link">SeokJae Oh</span>
+              
+            </div>
+          </div>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- begin post -->
+<div class="container">
+  <article class="post animate">
+
+    <div class="post__content">
+      <h1 id="개요">개요</h1>
+<p>현재 사이버 보안의 중요성과 빠르게 변화하는 위협 환경을 소개하고, 이 보고서의 목적을 명확히 설명합니다. 2024년 초, 각 주요 보안 회사들이 발표한 사이버 보안 트렌드에 대한 전망을 체계적으로 정리하고, 2024년 1월부터 10월까지 발생한 주요 사이버 공격 사건들을 심도 있게 분석하여, 이러한 전망이 실제 보안 동향과 어느 정도 일치했는지 검토하는 것이 본 연구의 핵심 목표입니다. 이러한 비교 분석을 통해 현재 보안 환경의 주요 트렌드를 파악하고, 이를 바탕으로 조직이 사이버 보안 전략을 수립할 때 참고할 수 있는 유용한 시사점을 도출하고자 합니다. 또한, 최신 Attack Surface를 도출하여 조직이 향후 대응해야 할 잠재적 위협을 보다 명확히 이해할 수 있도록 돕는 것을 목표로 합니다. 특히, 보안 위협의 지속적인 변화와 이에 따른 대응 전략의 중요성을 강조하며, 이를 통해 조직이 예상치 못한 공격에 대비하고 보안 태세를 강화할 수 있는 구체적이고 실질적인 방안을 마련하는 데 기여하고자 합니다.</p>
+
+<h1 id="2024년-사이버-공격-전망">2024년 사이버 공격 전망</h1>
+
+<p><img src="https://i.imgur.com/0fK9IFp.png" alt="" /></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>기관</th>
+      <th>2024년 사이버 공격 전망</th>
+      <th>키워드</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>과학기술정보통신부 &amp; KISA</td>
+      <td>은밀한 SW 공급망 공격</td>
+      <td>공급망</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>생성형 AI의 악용</td>
+      <td>AI</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>OT/ICS 및 IoT 보안 위협</td>
+      <td>IoT, OT</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>정치·사회적 이슈 악용</td>
+      <td>핵티비즘</td>
+    </tr>
+    <tr>
+      <td>금융보안원</td>
+      <td>금융보안 프렌들리 전략</td>
+      <td>전략</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>자율보안체계 전환</td>
+      <td>체계</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>사이버복원력</td>
+      <td>사이버복원력</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>클라우드 마이그레이션</td>
+      <td>클라우드</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>하이브리드 위협 증가</td>
+      <td>공격 표면</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>S/W 공급망 공격</td>
+      <td>공급망</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>딥페이크 기술 악용</td>
+      <td>AI</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>디지털지갑 경쟁</td>
+      <td>가상자산</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>AI의 안전성과 신뢰성 확보</td>
+      <td>AI</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>금융 사물인터넷(FoT) 보안 위협</td>
+      <td>IoT</td>
+    </tr>
+    <tr>
+      <td>국정원</td>
+      <td>정부 흔들기 목적</td>
+      <td>공급망</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>선거 개입 및 불신 조장</td>
+      <td>핵티비즘</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>외교 및 기술 절취</td>
+      <td>기술 절취</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>AI 및 위성통신 해킹</td>
+      <td>AI, 위성</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>돈벌이 목적 해킹</td>
+      <td>랜섬웨어, 가상자산</td>
+    </tr>
+    <tr>
+      <td>삼성 SDS</td>
+      <td>AI 악용 보안 위협</td>
+      <td>AI</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>하이브리드 환경 클라우드 보안</td>
+      <td>클라우드</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>개인정보 유출 및 주요 데이터 유출</td>
+      <td>데이터 유출</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>지속적으로 진화하는 랜섬웨어</td>
+      <td>랜섬웨어</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>공격 대상 확장에 따른 네트워크 보안 위협</td>
+      <td>공격 표면</td>
+    </tr>
+    <tr>
+      <td>Ahnlab</td>
+      <td>적대세력 간 사이버 공격 및 핵티비스트 활동 증가</td>
+      <td>핵티비즘</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>RaaS(Ransomware as a Service, 서비스형 랜섬웨어)조직의 변화 가속화</td>
+      <td>랜섬웨어</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>가상화 플랫폼을 노리는 랜섬웨어</td>
+      <td>랜섬웨어</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>금전 및 개인정보를 노린 안드로이드 악성 앱의 확산</td>
+      <td>모바일</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>암호화폐 탈취목적 개인 지갑을 노린 공격 심화</td>
+      <td>가상자산</td>
+    </tr>
+    <tr>
+      <td>SK Shieldus</td>
+      <td>인공지능을 악용한 사이버 공격</td>
+      <td>AI</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>제로데이를 악용한 전략 고도화</td>
+      <td>제로데이</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>연쇄적인 공급망 공격</td>
+      <td>공급망</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>다양한 형태의 자격 증명 탈취</td>
+      <td>자격 증명</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>타깃이 되는 클라우드 리소스</td>
+      <td>클라우드</td>
+    </tr>
+    <tr>
+      <td>EST Security</td>
+      <td>제로데이 취약점을 악용한 SW 공급망 공격의 증가</td>
+      <td>공급망, 제로데이</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>모바일 타깃 공격의 지속 및 고도화</td>
+      <td>모바일</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>사이버 공격자들의 생성형 AI 활용 증가</td>
+      <td>AI</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>정치적 목적을 가진 핵티비즘의 증가</td>
+      <td>핵티비즘</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>IoT/OT 시스템 타깃 보안위협 증가</td>
+      <td>IoT, OT</td>
+    </tr>
+    <tr>
+      <td>IGLOO</td>
+      <td>국가 지원 기반 공급망 공격 증가</td>
+      <td>공급망</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>사회적 이슈와 공격양상 변화로 인한 사이버보안 생태계의 불안</td>
+      <td>핵티비즘</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>이중 공격, 랜섬웨어 공격기법의 고도화</td>
+      <td>랜섬웨어</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>사이버 공격의 게임 체인저, 오픈소스 생태계로 인한 위험 체인화</td>
+      <td>오픈소스</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>생성형 AI를 이용한 사이버 공격 증가</td>
+      <td>AI</td>
+    </tr>
+    <tr>
+      <td>INCA Internet</td>
+      <td>생성형 AI의 위협</td>
+      <td>AI</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>더 정교해진 Phishing 위협</td>
+      <td>피싱</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>공급망 공격 주의</td>
+      <td>공급망</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>랜섬웨어 공격 증가</td>
+      <td>랜섬웨어</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>모바일 공격 증가</td>
+      <td>모바일</td>
+    </tr>
+    <tr>
+      <td>Cyberone</td>
+      <td>AI 시대의 새로운 위협</td>
+      <td>AI</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>핵티비즘 사이버 위협</td>
+      <td>핵티비즘</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>다양한 언어로 제작된 악성코드 위협</td>
+      <td>악성코드</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>다변화되고 지능화된 랜섬웨어</td>
+      <td>랜섬웨어</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>오픈소스 공급망 위협</td>
+      <td>공급망</td>
+    </tr>
+    <tr>
+      <td>Forbes</td>
+      <td>The Cyber Security Skills Crunch (사이버보안 인력 부족 문제)</td>
+      <td>인력</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>Generative AI Adopted On Both Sides Of The Battle (해킹과 방어 양측에서 채택된 생성형 AI)</td>
+      <td>AI</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>Next-Level Phishing Attacks (고도화된 피싱 공격)</td>
+      <td>피싱</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>Cyber Security In The Board Room (이사회에서의 사이버보안)</td>
+      <td>이사회</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>IoT Cyber Attacks (IoT 관련 사이버 공격)</td>
+      <td>IoT</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>Cyber Resilience – Beyond Cyber Security (사이버 복원력 강화)</td>
+      <td>사이버 복원력</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>Less Than Zero Trust (제로 트러스트)</td>
+      <td>제로 트러스트</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>Cyber Warfare And State-Sponsored Cyber Attacks (사이버전 및 국가 후원 사이버 공격)</td>
+      <td>국가 공격</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>Soft Skills Becoming Increasingly Essential For Cyber Security Professionals (사이버보안 전문가에게 필수적인 소프트 스킬)</td>
+      <td>기술력</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>Cyber Security Regulation (사이버보안 규제 강화)</td>
+      <td>규제</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="과학기술정보통신부--kisa">과학기술정보통신부 &amp; KISA</h2>
+<p><a href="https://www.msit.go.kr/bbs/view.do;jsessionid=dIGGQaXtoSBmMlqR9gQcLhH1mWDCf6CGmjMGm-94.AP_msit_1?sCode=user&amp;mPid=238&amp;mId=113&amp;bbsSeqNo=94&amp;nttSeqNo=3183831">2024 사이버 보안 위협 분석과 전망</a></p>
+<ol>
+  <li><strong>은밀한 SW 공급망 공격</strong>: 오픈소스를 악용한 APT 공격 증가. SBOM과 HBOM 필요성 강조.</li>
+  <li><strong>생성형 AI의 악용</strong>: AI 기반 사이버 범죄 도구 확산. 생성형 AI 기술을 악용하는 피싱 및 악성코드 제작 우려.</li>
+  <li><strong>OT/ICS 및 IoT 보안 위협</strong>: 스마트화로 인해 OT/ICS와 IoT 환경에서 보안 위협 증가. 보안 패치 부족으로 인한 취약점 증가.</li>
+  <li><strong>정치·사회적 이슈 악용</strong>: 선거와 같은 정치적 이벤트에 대한 사이버 공격 예상. 사회적 혼란을 야기하는 해킹 활동 증가.</li>
+</ol>
+
+<h2 id="금융보안원">금융보안원</h2>
+<p><a href="https://www.fsec.or.kr/bbs/detail?menuNo=241&amp;bbsNo=11367">2024년 디지털금융 및 사이버보안 이슈 전망</a></p>
+<ol>
+  <li><strong>금융보안 프렌들리 전략</strong>: 디지털금융 복잡성 증가에 따른 보안 관리 소홀로 인한 위협 증가. 보안을 필수 가치로 인식하고 관리 영역 확대 필요성 강조.</li>
+  <li><strong>자율보안체계 전환</strong>: 사전 통제 방식의 규제가 금융 IT 환경 변화에 대응하지 못해 보안 위협 증가.</li>
+  <li><strong>사이버복원력</strong>: IT 복잡성 증가와 고도화된 공격으로 보안 위협 증가</li>
+  <li><strong>클라우드 마이그레이션</strong>: SaaS 도입 확대에 따른 SaaS 관리 소홀 및 제3자 앱 취약점으로 인한 보안 위험 강조.</li>
+  <li><strong>하이브리드 위협 증가</strong>: 온·오프라인 연계 및 AI 적용으로 더욱 지능화된 하이브리드 위협 증가.</li>
+  <li><strong>S/W 공급망 공격</strong>: 오픈소스 활용으로 소프트웨어 공급망 취약점 공격 증가.</li>
+  <li><strong>딥페이크 기술 악용</strong>: 딥페이크 기술 발전으로 금융사기 범죄 증가 우려.</li>
+  <li><strong>디지털지갑 경쟁</strong>: 디지털지갑 이용 확대에 따른 보안 위협 증가.</li>
+  <li><strong>AI의 안전성과 신뢰성 확보</strong>: AI 기반 금융서비스 확산으로 보안 위협 증가</li>
+  <li><strong>금융 사물인터넷(FoT)</strong>: 사물인터넷 보안 위협이 금융과 연계해 고도화될 가능성 증가.</li>
+</ol>
+
+<h2 id="국정원">국정원</h2>
+<p><a href="https://www.ncsc.go.kr:4018/main/cop/bbs/selectBoardArticle.do?bbsId=Notification_main&amp;nttId=112827&amp;menuNo=010000&amp;subMenuNo=010300&amp;thirdMenuNo=">2024년도 사이버위협 전망</a></p>
+<ol>
+  <li><strong>정부 흔들기 목적</strong>: 북한이 우리나라 기반시설과 행정서비스를 공격해 사회 혼란 유도</li>
+  <li><strong>선거 개입 및 불신 조장</strong>: 주요국 선거에 영향을 미치기 위해 가짜뉴스, 딥페이크 유포와 해킹 시도 가능</li>
+  <li><strong>외교 및 기술 절취</strong>: 외교 전략 및 첨단 기술을 해킹하려는 시도 증가</li>
+  <li><strong>AI 및 위성통신 해킹</strong>: AI 도구의 악용과 위성 통제권 탈취가 사이버보안 이슈로 부각</li>
+  <li><strong>돈벌이 목적 해킹</strong>: 랜섬웨어와 가상자산 탈취를 통한 돈벌이 활동이 증가</li>
+</ol>
+
+<h2 id="삼성-sds">삼성 SDS</h2>
+<p><a href="https://www.samsungsds.com/kr/news/cybersecurity.240123.html">2024년 5대 사이버 보안 위협</a></p>
+<ol>
+  <li><strong>AI 악용 보안 위협</strong>: 생성형 AI로 악성코드 제작 시도 증가</li>
+  <li><strong>하이브리드 환경 클라우드 보안</strong>: 클라우드 보안 복잡성으로 취약점 위험 증가</li>
+  <li><strong>개인 정보, 민감 정보 등 주요 데이터 유출</strong>: 다양한 경로로 개인정보 유출 및 2차 피해 발생</li>
+  <li><strong>지속적으로 진화하는 랜섬웨어</strong>: RaaS 이용 증가, 보안 탄력성 필요</li>
+  <li><strong>공격 대상 확장에 따른 네트워크 보안 위협</strong>: 디지털 전환으로 공격 대상 확대</li>
+</ol>
+
+<h2 id="ahnlab">Ahnlab</h2>
+<p><a href="https://company.ahnlab.com/kr/news/press_release_view.do?seqPressRelease=8046">2024년 5대 사이버 보안위협 전망</a></p>
+<ol>
+  <li><strong>적대세력 간 사이버 공격 및 핵티비스트 활동 증가</strong>: 적대 세력 간 사이버 공격 증가, 딥페이크 활용 선전 및 공급망 공격 가능성</li>
+  <li><strong>RaaS(Ransomware as a Service, 서비스형 랜섬웨어)조직의 변화 가속화</strong>: RaaS 조직이 수사 대응 위한 리브랜딩 및 다중 랜섬웨어 전략 시도</li>
+  <li><strong>가상화 플랫폼을 노리는 랜섬웨어 활개</strong>: 클라우드 등 하드웨어 자원을 효율적으로 관리하기 위한 가상화 플랫폼 서버를 노리는 랜섬웨어 공격 증가 예상</li>
+  <li><strong>금전 및 개인정보를 노린 안드로이드 악성 앱의 확산</strong>: 금전 및 개인정보를 노린 안드로이드 악성 앱 확산 가능성</li>
+  <li><strong>암호화폐 탈취목적 개인 지갑을 노린 공격 심화</strong>: 거래 내역 추적이 어려운 암호화폐 탈취를 위한 개인 지갑 공격 증가 전망</li>
+</ol>
+
+<h2 id="sk-shieldus">SK Shieldus</h2>
+<p><a href="https://www.skshieldus.com/download/files/download.do?o_fname=EQST%20Annual%20Report%202024%20%EB%B3%B4%EC%95%88%20%EC%9C%84%ED%98%91%20%EC%A0%84%EB%A7%9D%20%EB%B3%B4%EA%B3%A0%EC%84%9C.pdf&amp;r_fname=20231208134931689.pdf">2024 보안 위협 전망 보고서</a></p>
+<ol>
+  <li><strong>인공지능을 악용한 사이버 공격</strong>: AI로 인한 사이버 공격의 정교화 및 지능화된 피싱 전략</li>
+  <li><strong>제로데이를 악용한 전략 고도화</strong>: 제로데이 취약점과 AI를 이용한 랜섬웨어 공격 강화</li>
+  <li><strong>연쇄적인 공급망 공격</strong>: 주요 인프라를 표적으로 한 공급망 공격 증가</li>
+  <li><strong>다양한 형태의 자격 증명 탈취</strong>: IAM 자격 증명, EleKtra Leak 등과 같은 다양한 인증 정보 및 다크웹 거래되는 인증 정보</li>
+  <li><strong>타깃이 되는 클라우드 리소스</strong>: 클라우드 리소스를 이용한 가상화폐 채굴 및 AI 리소스 공격 증가</li>
+</ol>
+
+<h2 id="est-security">EST Security</h2>
+<p><a href="https://www.estsecurity.com/public/security-info/column/view/652040">2024년 보안 위협 전망 및 2023년 주요 보안 이슈 회고</a></p>
+<ol>
+  <li><strong>제로데이 취약점을 악용한 SW 공급망 공격의 증가</strong>: 제로데이 취약점을 이용한 SW 공급망 공격 증가로 탐지 어려움과 대규모 공격 가능성</li>
+  <li><strong>모바일 타깃 공격의 지속 및 고도화</strong>: 모바일 타깃 공격 고도화로 스미싱 및 리패키징 앱을 통한 위협 증가</li>
+  <li><strong>사이버 공격자들의 생성형 AI 활용 증가</strong>: 생성형 AI를 활용한 피싱과 악성 툴 개발 등과 같은 사이버 공격 증가</li>
+  <li><strong>정치적 목적을 가진 핵티비즘의 증가</strong>: 정치적 목적의 핵티비즘 증가 및 선거 개입을 위한 해킹 활동 예상</li>
+  <li><strong>IoT/OT 시스템 타깃 보안위협 증가</strong>: IoT/OT 시스템 보안위협 증가로 자동화와 스마트 기기에 대한 공격 가능성 확대</li>
+</ol>
+
+<h2 id="igloo">IGLOO</h2>
+<p><a href="https://www.igloo.co.kr/security-information/2024%EB%85%84-%EC%82%AC%EC%9D%B4%EB%B2%84-%EB%B3%B4%EC%95%88-%EC%9C%84%ED%98%91-%EB%B0%8F-%EA%B8%B0%EC%88%A0-%EC%A0%84%EB%A7%9D/">2024년 사이버 보안 위협 및 기술 전망</a></p>
+<ol>
+  <li><strong>국가 지원 기반 공급망 공격 증가</strong>: 국가 지원 사이버 공격에 의한 공급망 공격이 증가하며 차세대 기술(인공지능, 클라우드, IoT)을 악용해 피해가 확산</li>
+  <li><strong>사회적 이슈와 공격양상 변화로 인한 사이버보안 생태계의 불안</strong>: 사회 이슈와 보안 강화로 인해 피싱 공격 방식이 변화하고 새로운 파일 형식을 이용한 사이버 공격이 증가</li>
+  <li><strong>이중 공격, 랜섬웨어 공격기법의 고도화</strong>: 취약점 악용과 다중 협박 방식으로 고도화된 랜섬웨어 공격기법을 통한 피해 증가</li>
+  <li><strong>사이버 공격의 게임 체인저, 오픈소스 생태계로 인한 위험 체인화</strong>: 오픈소스 생태계 확산으로 종속성 혼동, 타이포스쿼팅 등 취약점을 악용한 공격 증가</li>
+  <li><strong>생성형 AI를 이용한 사이버 공격 증가</strong>: 생성형 AI의 악용으로 악성코드 생성과 적대적 공격 등 새로운 사이버 보안 위협 증가</li>
+</ol>
+
+<h2 id="inca-internet">INCA Internet</h2>
+<p><a href="https://isarc.tachyonlab.com/5591?category=1007110">2024 사이버 보안 전망</a></p>
+<ol>
+  <li><strong>생성형 AI의 위협</strong>: 생성형 AI의 확산으로 사이버 공격에 악용되는 사례 증가</li>
+  <li><strong>더 정교해진 Phishing 위협</strong>: QR코드를 이용한 큐싱 등과 같은 지능적인 방식으로 피싱 공격기법 고도화</li>
+  <li><strong>공급망 공격 주의</strong>: 소프트웨어 업데이트 과정에서 악성 코드 배포로 악용되는 공급망 공격 사례 증가</li>
+  <li><strong>랜섬웨어</strong>: 취약점을 이용해 대규모 서버를 랜섬웨어 공격하는 사례 증가</li>
+  <li><strong>증가하는 모바일 공격</strong>: 모바일 보안 위협 증가로 스미싱과 과도한 권한 요구 악용 사례 증가</li>
+</ol>
+
+<h2 id="cyberone">Cyberone</h2>
+<p><a href="https://www.cyberone.kr/news-trends-detail?id=108616&amp;page=4">2024년 사이버 보안 5대 위협 전망 및 대응 방안</a></p>
+<ol>
+  <li><strong>AI 시대의 새로운 위협</strong>: 생성형 AI의 악용으로 전 세계적 사이버 공격 위험 증가</li>
+  <li><strong>핵티비즘 사이버 위협</strong>: 핵티비즘 사이버 공격이 지능화·고도화되며 공격 범위와 규모가 확대</li>
+  <li><strong>다향한 언어로 제작된 악성코드 위협</strong>: Golang, Rust, Nim 등 새로운 언어로 작성된 악성코드 비중 증가</li>
+  <li><strong>다변화되고 지능화된 랜섬웨어 위협</strong>: 랜섬웨어 공격이 서비스형 모델로 다변화되고 지능화되며 공격 대상과 위협 수준 증가</li>
+  <li><strong>오픈소스 공급망 위협</strong>: 오픈소스의 확산으로 공급망 공격에 악용되는 사례 증가</li>
+</ol>
+
+<h2 id="forbes">Forbes</h2>
+<p><a href="https://www.forbes.com/sites/bernardmarr/2023/10/11/the-10-biggest-cyber-security-trends-in-2024-everyone-must-be-ready-for-now/">The 10 Biggest Cyber Security Trends In 2024</a></p>
+<ol>
+  <li><strong>The Cyber Security Skills Crunch (사이버보안 인력 부족 문제)</strong>: 사이버 보안 전문가 부족으로 인한 영향이 악화되며, 인력 확보를 위한 급여 인상 및 교육 투자 증가 전망</li>
+  <li><strong>Generative AI Adopted On Both Sides Of The Battle (해킹과 방어 양측에서 채택된 생성형 AI)</strong>: AI가 사이버 공격과 방어 양측에서 활용되어 정교한 공격과 스마트한 방어가 증가할 전망</li>
+  <li><strong>Next-Level Phishing Attacks (고도화된 피싱 공격)</strong>: 생성형 AI를 활용한 피싱 공격이 정교화되고 딥페이크 공격이 증가할 전망</li>
+  <li><strong>Cyber Security In The Board Room (이사회에서의 사이버보안)</strong>: 사이버 보안이 전략적 우선순위로 부상하며, 이사회 내 사이버 보안 전문가 참여 증가 전망</li>
+  <li><strong>IoT Cyber Attacks (IoT 관련 사이버 공격)</strong>: IoT 장치의 보안 취약성으로 인해 재택근무 환경에서 사이버 공격 위험 증가 전망</li>
+  <li><strong>Cyber Resilience – Beyond Cyber Security (사이버 복원력 - 보안을 넘어)</strong>: 사이버 복원력 강화가 2024년의 전략적 우선순위로 부상하며, 침해 이후 운영 연속성 보장이 중요해질 전망</li>
+  <li><strong>Less Than Zero Trust (제로트러스트 미충족)</strong>: 제로 트러스트가 AI 기반 실시간 인증을 통해 적응적이고 전체적인 보안 접근 방식으로 진화할 전망</li>
+  <li><strong>Cyber Warfare And State-Sponsored Cyber Attacks (사이버전 및 국가 후원 사이버 공격)</strong>: 2024년에 군사 작전과 함께 사이버 전쟁 작전이 증가하고 주요 선거를 겨냥한 사이버 공격도 확대될 전망</li>
+  <li><strong>Soft Skills Becoming Increasingly Essential For Cyber Security Professionals (사이버보안 전문가에게 필수적인 소프트 스킬)</strong>: 위협 환경의 복잡성 증가로 사이버 보안 전문가에게 소프트 스킬의 중요성이 커질 전망</li>
+  <li><strong>Cyber Security Regulation (사이버보안 규제 강화)</strong>: 사이버 보안 위협에 대응하기 위한 새로운 규제가 등장하며, 국가 및 기업의 보안 규제 준수 중요성이 커질 전망</li>
+</ol>
+
+<h1 id="2024년-사이버-공격-현황">2024년 사이버 공격 현황</h1>
+<p><img src="https://i.imgur.com/1M7vShO.png" alt="" /></p>
+
+<p>2024년 1월부터 9월까지의 사이버 공격 현황을 살펴보면, 다양한 분야에서 공격이 급증하며 광범위한 피해가 발생하고 있습니다. 이번 보고에서는 주요 사건들을 바탕으로 전반적인 사이버 위협 트렌드를 분석합니다.</p>
+
+<p>가장 두드러진 공격 유형으로는 랜섬웨어, 데이터 유출, 제로데이 취약점 악용, 피싱, 그리고 악성코드 유포 등이 있었습니다. 랜섬웨어 공격은 의료기관, 대형 기업, 정부기관 등 주요 표적을 대상으로 한 공격이 계속해서 증가하고 있으며, 특히 데이터 유출과 금전적 요구가 동시에 발생하는 사건들이 많았습니다. 예를 들어, 1월에는 미국 제록스 비즈니스 솔루션이 랜섬웨어 공격을 받아 민감 데이터가 유출되었고, 8월에는 호주의 메디시큐어 랜섬웨어 사건으로 1,290만 명의 개인정보가 유출되었습니다. 랜섬웨어 공격은 개인과 기업 모두에게 큰 경제적 피해를 입히며, 그 빈도와 파괴력이 해마다 증가하고 있습니다.</p>
+
+<p>제로데이 취약점 악용 또한 주목할 만한 위협으로 자리 잡고 있습니다. 구글 크롬, 윈도우, 아파치 OFBiz 등 널리 사용되는 소프트웨어에서 새로운 제로데이 취약점이 발견되어 즉각적인 보안 패치가 필요했습니다. 이러한 취약점을 악용한 공격은 주로 악성코드 설치, 데이터 탈취, 그리고 시스템 장애를 초래하며, 이에 따른 피해는 기업과 사용자 모두에게 막대한 영향을 미쳤습니다.</p>
+
+<p>데이터 및 자산 유출 사고도 빈번히 발생했습니다. 다크웹을 통한 정보 유출이 일반화되면서, 민감한 개인정보가 대규모로 유출되는 사례가 여러 차례 보고되었습니다. 특히, AT&amp;T와 같은 통신사나 대형 금융기관, 그리고 클라우드 서비스 제공업체들이 표적이 되어 수백만 건의 개인정보가 유출되었으며, 이러한 유출 사건은 사이버 범죄자들에게 추가적인 악용 기회를 제공하고 있습니다.</p>
+
+<p>피싱과 스미싱 공격도 여전히 큰 비중을 차지하고 있습니다. 피싱 공격은 주로 금융 정보를 노리거나 랜섬웨어 설치를 유도하는 형태로 발전하였으며, QR코드나 모바일 메시지를 통한 공격이 새롭게 등장했습니다. 9월에는 추석 명절을 악용한 스미싱 공격이 급증한 것으로 보고되어 사용자들의 주의가 요구되었습니다.</p>
+
+<p>악성코드는 다양한 형태로 유포되고 있으며, 특히 IoT 기기와 클라우드를 타깃으로 한 악성코드가 많이 발견되었습니다. 예를 들어, 6월에는 블러드알케미 악성코드가 동남아 정부를 대상으로 한 정교한 사이버 공격에 사용되었으며, 8월에는 클라우드플레어 터널을 악용한 새로운 위협이 발견되어 클라우드 인프라의 보안 취약점이 다시 한번 도마에 올랐습니다.</p>
+
+<p>이와 같은 다양한 사이버 공격 사례들은 2024년에도 여전히 진화하는 위협 환경을 보여주고 있으며, 공격자들은 새로운 취약점을 신속하게 악용하여 다양한 산업과 인프라에 피해를 주고 있습니다. 기업과 개인은 이러한 위협에 대비하기 위해 보안 인프라를 강화하고, 최신 보안 패치를 적용하며, 사이버 보안에 대한 경각심을 높이는 것이 필요합니다.</p>
+
+<h2 id="2024년-01월--09월-사이버-공격-사례-조사">2024년 01월 ~ 09월 사이버 공격 사례 조사</h2>
+
+<p><img src="https://i.imgur.com/iEDo80m.png" alt="" />
+<img src="https://i.imgur.com/H2MUjk2.png" alt="" />
+<img src="https://i.imgur.com/M8uns38.png" alt="" />
+<img src="https://i.imgur.com/86y036k.png" alt="" />
+<img src="https://i.imgur.com/jYHvHal.png" alt="" />
+<img src="https://i.imgur.com/UXhCFt5.png" alt="" />
+<img src="https://i.imgur.com/9Eo3Dgb.png" alt="" />
+<img src="https://i.imgur.com/R7S8eiy.png" alt="" />
+<img src="https://i.imgur.com/3JLpOuL.png" alt="" /></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+    "01월": {
+        "1": {
+            "title": "최근 의료기관 사이버공격 피해 속출...의료정보 노린 공격 급증 주의",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=152583",
+            "keyword": [
+                "데이터 및 자산 유출"
+            ]
+        },
+        "8": {
+            "title": "미국 제록스 비즈니스 솔루션, INC 랜섬웨어 공격으로 침해사고 발생…민감 데이터 유출",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=152571",
+            "keyword": [
+                "랜섬웨어",
+                "데이터 및 자산 유출"
+            ]
+        },
+        "9": {
+            "title": "오르빗 체인, 해킹으로 1,123억원 이상 가상화폐 탈취당해…북한 해킹그룹 소행으로 추정",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=152569",
+            "keyword": [
+                "가상자산",
+                "데이터 및 자산 유출"
+            ]
+        },
+        "10": {
+            "title": "윈도우 10과11에 신종 DLL 공격 기법 발견돼…데이터 및 시스템 침해 우려 심각",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=152563",
+            "keyword": [
+                "제로데이",
+                "악성코드",
+                "공격 표면"
+            ]
+        },
+        "11": {
+            "title": "북한 해킹 조직 스피어피싱 메일 공격에 평균 25%가 응답…심각한 수준",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=152560",
+            "keyword": [
+                "피싱",
+                "악성코드"
+            ]
+        },
+        "23": {
+            "title": "구글 멀티로그인 심각한 취약점, 비밀번호 재설정 해도 계속 공격당할 수 있어",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=152620",
+            "keyword": [
+                "제로데이",
+                "데이터 및 자산 유출"
+            ]
+        },
+        "31": {
+            "title": "맨디언트 트위터 계정 해킹…암호화폐 탈취 시도",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=152611",
+            "keyword": [
+                "가상자산",
+                "피싱"
+            ]
+        },
+        "40": {
+            "title": "“다크웹 통한 정보유출, 일반적이고 광범위하게 퍼져 있어”",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=152591",
+            "keyword": [
+                "데이터 및 자산 유출"
+            ]
+        },
+        "41": {
+            "title": "대출기관 론디포, 사이버공격으로 업무 장애 발생…랜섬웨어 공격으로 추정",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=152678",
+            "keyword": [
+                "랜섬웨어",
+                "데이터 및 자산 유출"
+            ]
+        },
+        "42": {
+            "title": "11개월 동안 미국 주요 인프라 공격한 은밀한 위협, AsyncRAT 멀웨어",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=152677",
+            "keyword": [
+                "악성코드"
+            ]
+        },
+        "50": {
+            "title": "새로운 사이버 위협 발견…장기간 공격 위해 구글 크롬 API 악용하는 멀웨어",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=152653",
+            "keyword": [
+                "악성코드",
+                "제로데이"
+            ]
+        },
+        "51": {
+            "title": "리눅스 기기에 암호화폐 채굴기 유포하는 악성 패키지 3개 발견",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=152652",
+            "keyword": [
+                "가상자산",
+                "악성코드"
+            ]
+        },
+        "54": {
+            "title": "윈도우 시스템 노리는 새로운 반두크 RAT 변종 다시 등장…주의",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=152648",
+            "keyword": [
+                "악성코드"
+            ]
+        },
+        "63": {
+            "title": "바북 랜섬웨어 토르티야 변종 암호 해독기 공개돼…위협 인텔리전스 정보공유 중요",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=152732",
+            "keyword": [
+                "랜섬웨어"
+            ]
+        },
+        "64": {
+            "title": "SEC 트위터 계정 해킹으로 비트코인 ETF 승인이라는 가짜 뉴스 퍼져…비트코인 시장 대혼란",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=152731",
+            "keyword": [
+                "가상자산"
+            ]
+        },
+        "65": {
+            "title": "MSSQL 타깃으로 한 대규모 사이버 공격 발생…미믹 랜섬웨어 주의",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=152730",
+            "keyword": [
+                "랜섬웨어"
+            ]
+        },
+        "68": {
+            "title": "다양한 성인 게임 실행 파일로 위장해 유포 중인 악성코드 주의",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=152717",
+            "keyword": [
+                "악성코드"
+            ]
+        },
+        "71": {
+            "title": "기독교 단체 공격해 비트코인 요구한 리시다 랜섬웨어 조직…종교단체 공격 증가",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=152693",
+            "keyword": [
+                "랜섬웨어",
+                "가상자산"
+            ]
+        },
+        "80": {
+            "title": "엔씨소프트 '쓰론 앤 리버티(TL)', 크리덴셜 스터핑 계정 탈취로 유저 게임 머니 피해 발생",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=152679",
+            "keyword": [
+                "데이터 및 자산 유출",
+                "가상자산"
+            ]
+        },
+        "87": {
+            "title": "덴마크 22개 에너지 기관 대상 사이버 공격…새로운 분석 나와",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=152807",
+            "keyword": [
+                "OT",
+                "공급망"
+            ]
+        },
+        "95": {
+            "title": "맨디언트 X 트위터 계정 해킹당해…해커, 가상화폐 탈취 피싱 링크 유포에 악용",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=152761",
+            "keyword": [
+                "가상자산",
+                "피싱"
+            ]
+        },
+        "98": {
+            "title": "대형 의료서비스 기업 HMG헬스케어, 랜섬웨어 공격으로 환자·직원 데이터 대규모 유출",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=152758",
+            "keyword": [
+                "랜섬웨어",
+                "데이터 및 자산 유출"
+            ]
+        },
+        "99": {
+            "title": "보안기업 해킹해 스위스 공군 기밀정보 빼낸 블랙캣 랜섬웨어 조직…심각한 안보 위협",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=152756",
+            "keyword": [
+                "랜섬웨어",
+                "데이터 및 자산 유출"
+            ]
+        },
+        "100": {
+            "title": "윈도우와 맥OS에서 악용될 수 있는 오페라 브라우저 보안취약점 ‘MyFlaw’ 주의",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=152850",
+            "keyword": [
+                "제로데이"
+            ]
+        },
+        "115": {
+            "title": "[긴급] 소닉월 차세대방화벽 17만8천개 원격 공격 위협에 노출…주의",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=152849",
+            "keyword": [
+                "공격 표면",
+                "제로데이"
+            ]
+        },
+        "116": {
+            "title": "해커, 1,500개 클라우드 계정 탈취해 100만대 이상 가상서버 구성…가상화폐 탈취 시도",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=152848",
+            "keyword": [
+                "가상자산",
+                "클라우드",
+                "데이터 및 자산 유출"
+            ]
+        },
+        "120": {
+            "title": "국내 커뮤니티 사이트 대상 다크웹 정보 유출 현황 조사, 7만 건의 로그인 정보 유출 확인",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=152832",
+            "keyword": [
+                "데이터 및 자산 유출"
+            ]
+        },
+        "132": {
+            "title": "구글 크롬 브라우저에 실제 사이버공격에 사용되는 제로데이 취약점 발견돼",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=152901",
+            "keyword": [
+                "제로데이"
+            ]
+        },
+        "134": {
+            "title": "[긴급] 시트릭스 및 아틀라시안 제품에 심각한 보안취약점…제로데이 공격 주의",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=152899",
+            "keyword": [
+                "제로데이",
+                "공격 표면"
+            ]
+        },
+        "141": {
+            "title": "반스, 수프림, 노스페이스 브랜드 모회사 VFC, 랜섬웨어 공격으로 3,500만 명 고객 데이터 유출",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=152982",
+            "keyword": [
+                "랜섬웨어",
+                "데이터 및 자산 유출"
+            ]
+        },
+        "154": {
+            "title": "‘아키라’ 랜섬웨어, 유명 청바지 메이커 ‘덴햄’ 공격…100GB 민감 데이터 탈취",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=152954",
+            "keyword": [
+                "랜섬웨어",
+                "데이터 및 자산 유출"
+            ]
+        },
+        "155": {
+            "title": "AMD, 애플, 퀄컴 GPU 보안 취약점으로  AI·머신러닝 데이터 심각한 위험에 노출",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=152941",
+            "keyword": [
+                "제로데이",
+                "데이터 및 자산 유출"
+            ]
+        },
+        "157": {
+            "title": "전 세계 17만 대 안드로이드 TV 감염시켜 사이버 공격에 이용하는 ‘빅판지’ 조직",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=152939",
+            "keyword": [
+                "악성코드",
+                "IoT"
+            ]
+        },
+        "160": {
+            "title": "[긴급] Androxgh0st 악성 봇넷 확산, AWS·MS 등 클라우드와 가상화폐에 큰 위협",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=152936",
+            "keyword": [
+                "악성코드",
+                "클라우드",
+                "가상자산"
+            ]
+        },
+        "161": {
+            "title": "태국, 2024년 사이버공격 급증…다크웹에 민감 개인정보 대량 유통중",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=153016",
+            "keyword": [
+                "데이터 및 자산 유출"
+            ]
+        },
+        "162": {
+            "title": "아키라 랜섬웨어 조직, 스웨덴 데이터센터 공격해 각종 서비스 장애 발생",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=153015",
+            "keyword": [
+                "랜섬웨어",
+                "데이터 및 자산 유출"
+            ]
+        },
+        "170": {
+            "title": "유명 프랜차이즈 ‘서브웨이’, 락빗 랜섬웨어 공격 받아 수백기가 정보 유출…랜섬머니 요구중",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=153002",
+            "keyword": [
+                "랜섬웨어",
+                "데이터 및 자산 유출"
+            ]
+        },
+        "171": {
+            "title": "[주의] 심각한 아파치 ActiveMQ 보안취약점 악용하는 사이버공격 급증",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=153001",
+            "keyword": [
+                "제로데이",
+                "악성코드"
+            ]
+        },
+        "176": {
+            "title": "MLflow, ClearML 등 오픈소스 AI 플랫폼 치명적 보안취약점 주의",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=152987",
+            "keyword": [
+                "제로데이",
+                "AI"
+            ]
+        },
+        "177": {
+            "title": "솔라윈즈 공격했던 러시아 해킹그룹 ‘노벨리움’, MS 고위 경영진 타깃 공격",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=152986",
+            "keyword": [
+                "데이터 및 자산 유출"
+            ]
+        },
+        "178": {
+            "title": "[긴급] 중국 해킹그룹, 수년간 VMware 제로데이 취약점 악용…주의",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=152985",
+            "keyword": [
+                "제로데이"
+            ]
+        },
+        "180": {
+            "title": "팀뷰어(TeamViewer) 악용해 기업 타깃 랜섬웨어 공격 발견돼...주의",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=152983",
+            "keyword": [
+                "랜섬웨어"
+            ]
+        },
+        "189": {
+            "title": "[긴급] 260억 개 이상 사상 최대 해킹 데이터 저장소 발견…한국도 1만6천개 이상 사이트서 6천만개 이상 데이터 유출",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=153045",
+            "keyword": [
+                "데이터 및 자산 유출"
+            ]
+        },
+        "190": {
+            "title": "맥OS 사용자 타깃, 해킹된 SW 통해 가상화폐 지갑 데이터 탈취…신종 멀웨어 등장",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=153044",
+            "keyword": [
+                "가상자산",
+                "악성코드"
+            ]
+        },
+        "191": {
+            "title": "美 증권거래위원회, X 계정 해킹 원인은 심스와핑 공격",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=153043",
+            "keyword": [
+                "데이터 및 자산 유출"
+            ]
+        },
+        "192": {
+            "title": "애플, 2024년 첫 제로데이 웹킷 취약점 익스플로잇 패치",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=153042",
+            "keyword": [
+                "제로데이"
+            ]
+        },
+        "200": {
+            "title": "아웃룩과 윈도우 취약점 악용 새로운 NTLM 해시 유출 공격 드러나…침해사고 위험",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=153017",
+            "keyword": [
+                "제로데이",
+                "악성코드",
+                "데이터 및 자산 유출"
+            ]
+        },
+        "212": {
+            "title": "북한, 2023년 역대 최다 해킹 시도에도 수익은 전년 대비 7억 달러 감소",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=153099",
+            "keyword": [
+                "가상자산",
+                "데이터 및 자산 유출"
+            ]
+        },
+        "216": {
+            "title": "아틀라시안 컨플루언스 데이터 센터와 서버의 심각한 보안취약점, 해커들 공격에 적극 활용 중",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=153081",
+            "keyword": [
+                "제로데이",
+                "공격 표면"
+            ]
+        },
+        "217": {
+            "title": "970만 명 메디뱅크 개인정보 탈취한 REvil 랜섬웨어 조직원에 금융 제재",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=153080",
+            "keyword": [
+                "랜섬웨어",
+                "데이터 및 자산 유출"
+            ]
+        },
+        "223": {
+            "title": "제로다크웹, 대화형 AI 서비스 대상 다크웹 정보 유출 현황 조사...41만 건 로그인 정보 유출 확인",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=153178",
+            "keyword": [
+                "데이터 및 자산 유출",
+                "AI"
+            ]
+        },
+        "225": {
+            "title": "씨디네트웍스, 비트코인 ETF 美 증시 승인 직전 대규모 DDoS 공격 방어",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=153175",
+            "keyword": [
+                "공격 표면",
+                "가상자산"
+            ]
+        },
+        "226": {
+            "title": "대형 수자원 기반시설 기업 2곳, 랜섬웨어 공격으로 데이터 유출...비트코인 요구",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=153165",
+            "keyword": [
+                "랜섬웨어",
+                "데이터 및 자산 유출",
+                "가상자산"
+            ]
+        },
+        "228": {
+            "title": "포보스 랜섬웨어의 새롭고 정교한 변종 ‘FAUST’ 유포중",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=153163",
+            "keyword": [
+                "랜섬웨어"
+            ]
+        },
+        "229": {
+            "title": "맥시코 기업 타깃 신종 올라코어 RAT 멀웨어 확산…주의",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=153162",
+            "keyword": [
+                "악성코드"
+            ]
+        },
+        "230": {
+            "title": "해킹 그룹 APT29, 악성 OAuth 애플리케이션 사용해 사이버 공격 확대…주의",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=153161",
+            "keyword": [
+                "악성코드",
+                "핵티비즘"
+            ]
+        },
+        "231": {
+            "title": "글로벌 핀테크 기업 이퀴렌드, 사이버공격으로 운영 중단 사태 발생",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=153160",
+            "keyword": [
+                "데이터 및 자산 유출"
+            ]
+        },
+        "243": {
+            "title": "주니퍼네트웍스, 심각한 취약점 긴급 Junos OS 업데이트 발표",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=153238",
+            "keyword": [
+                "제로데이",
+                "공격 표면"
+            ]
+        },
+        "257": {
+            "title": "[긴급] 중국 해커, S2W 보고서에 앙심 품고 한국 여러 사이트 해킹…국방부 공격도 주장",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=153208",
+            "keyword": [
+                "데이터 및 자산 유출",
+                "공격 표면"
+            ]
+        },
+        "280": {
+            "title": "메르세데스-벤츠, 해킹 공격으로 소스코드와 중요 정보 유출",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=153241",
+            "keyword": [
+                "데이터 및 자산 유출"
+            ]
+        }
+    },
+    "02월": {
+        "263": {
+            "title": "모바일 연하장 등 신년 인사‧모임 등 개인정보 탈취 공격 기승…주의",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=153287",
+            "keyword": [
+                "데이터 및 자산 유출",
+                "피싱"
+            ]
+        },
+        "267": {
+            "title": "FBI, 미국 인프라 노린 중국 해킹그룹 볼트 타이푼의 KV 봇넷 해체에 성공",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=153278",
+            "keyword": [
+                "공격 표면",
+                "데이터 및 자산 유출",
+                "핵티비즘"
+            ]
+        },
+        "268": {
+            "title": "글로벌 핀테크기업 DTT, 30만명 고객 민감 데이터 유출",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=153275",
+            "keyword": [
+                "데이터 및 자산 유출"
+            ]
+        },
+        "269": {
+            "title": "사이버 공격에 사용되는 무기화된 USB 공격과 모듈형 멀웨어 주의",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=153272",
+            "keyword": [
+                "악성코드",
+                "공격 표면"
+            ]
+        },
+        "281": {
+            "title": "다국적 기업 존슨 컨트롤스, 다크엔젤스 랜섬웨어 공격으로 2,700만 달러 피해 발생",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=153344",
+            "keyword": [
+                "랜섬웨어",
+                "데이터 및 자산 유출"
+            ]
+        },
+        "291": {
+            "title": "ALPHV 랜섬웨어 그룹, 미국의 방대한 데이터 유출…안보에 심각한 위협",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=153304",
+            "keyword": [
+                "랜섬웨어",
+                "데이터 및 자산 유출"
+            ]
+        },
+        "318": {
+            "title": "클라우드플레어, 국가 배후 사이버공격에 당해…해커, 옥타에서 훔친 자격 증명 활용해 공격",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=153348",
+            "keyword": [
+                "공격 표면",
+                "데이터 및 자산 유출",
+                "핵티비즘"
+            ]
+        },
+        "319": {
+            "title": "인터폴 국제 공조로 랜섬웨어, 피싱, 멀웨어 공격에 사용된 해킹 서버 1,300대 제거",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=153346",
+            "keyword": [
+                "랜섬웨어",
+                "악성코드",
+                "피싱"
+            ]
+        },
+        "320": {
+            "title": "시카고 루리 아동병원, 랜섬웨어 공격으로 진료 시스템 마비",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=153345",
+            "keyword": [
+                "랜섬웨어",
+                "데이터 및 자산 유출",
+                "OT"
+            ]
+        },
+        "325": {
+            "title": "中 정부 후원 해킹그룹 ‘볼트 타이푼’, 통신·에너지·교통·상하수도 등 기반시설 집중 공격",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=153472",
+            "keyword": [
+                "공격 표면",
+                "공급망",
+                "OT",
+                "데이터 및 자산 유출",
+                "핵티비즘"
+            ]
+        },
+        "326": {
+            "title": "비주얼 스튜디오 업데이트로 위장한 RustDoor 맥OS 멀웨어 변종 확산중…주의",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=153461",
+            "keyword": [
+                "악성코드"
+            ]
+        },
+        "327": {
+            "title": "[주의] 포티넷 포티OS RCE 취약점 악용중…네트워크 보안 위해 긴급 조치 필요",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=153460",
+            "keyword": [
+                "제로데이",
+                "공격 표면"
+            ]
+        },
+        "330": {
+            "title": "“랜섬웨어 피해액, 2023년 10억 달러 넘어…역대 최고액”",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=153448",
+            "keyword": [
+                "랜섬웨어",
+                "데이터 및 자산 유출"
+            ]
+        },
+        "331": {
+            "title": "도박 정보 파일로 위장해 유포 중인 악성코드 주의",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=153447",
+            "keyword": [
+                "악성코드"
+            ]
+        },
+        "333": {
+            "title": "애니데스크, 사이버 공격으로 소스코드와 개인코드서명 키 유출",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=153438",
+            "keyword": [
+                "데이터 및 자산 유출"
+            ]
+        },
+        "350": {
+            "title": "[긴급] 해커, 이반티 SSRF 취약점 악용해 650개 이상 기업들 공격…다수 한국 기업들도 피해",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=153513",
+            "keyword": [
+                "제로데이",
+                "공격 표면"
+            ]
+        },
+        "351": {
+            "title": "뱅크 오브 아메리카 데이터 유출, 서비스 제공업체 침해사고로 발생해",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=153512",
+            "keyword": [
+                "데이터 및 자산 유출"
+            ]
+        },
+        "370": {
+            "title": "락빗 랜섬웨어 그룹, 조지아주 풀턴 카운티 사이버 공격…공공서비스 마비",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=153572",
+            "keyword": [
+                "랜섬웨어",
+                "데이터 및 자산 유출",
+                "공급망",
+                "OT"
+            ]
+        },
+        "372": {
+            "title": "캐나다 대형 에너지 파이프라인 운영기업 공격한 ALPHV/BlackCat 랜섬웨어 그룹",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=153562",
+            "keyword": [
+                "랜섬웨어",
+                "데이터 및 자산 유출",
+                "OT"
+            ]
+        },
+        "374": {
+            "title": "국내 인터넷강의 사이트 대상 다크웹 정보 유출 조사 결과…4만 5천여 건 유출 확인",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=153560",
+            "keyword": [
+                "데이터 및 자산 유출"
+            ]
+        },
+        "375": {
+            "title": "국내 공공종합병원 78%, 이메일 사기 및 도메인 스푸핑 공격에 노출",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=153559",
+            "keyword": [
+                "피싱",
+                "공격 표면"
+            ]
+        },
+        "390": {
+            "title": "마이크로소프트 긴급 경고, 제로데이 공격에 악용된 중요 Exchange 서버 취약점 주의",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=153596",
+            "keyword": [
+                "제로데이",
+                "공격 표면"
+            ]
+        },
+        "393": {
+            "title": "북한, 자금 세탁에 ‘체인 호핑’ 악용 급증",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=153611",
+            "keyword": [
+                "가상자산",
+                "데이터 및 자산 유출",
+                "핵티비즘"
+            ]
+        },
+        "395": {
+            "title": "박성수 카스퍼스키 책임 “北 김수키 해킹그룹, 매일매일 공격…더 정교해지고 있다”",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=153601",
+            "keyword": [
+                "공격 표면",
+                "데이터 및 자산 유출",
+                "핵티비즘"
+            ]
+        },
+        "410": {
+            "title": "아키라 랜섬웨어 그룹, 시스코 등 보안취약점 악용해 공격…주의",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=153653",
+            "keyword": [
+                "랜섬웨어",
+                "제로데이",
+                "공격 표면"
+            ]
+        },
+        "423": {
+            "title": "메타 플랫폼, 글로벌 감시 네트워크 폭로…새로운 위협 공개",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=153700",
+            "keyword": [
+                "공격 표면",
+                "데이터 및 자산 유출"
+            ]
+        },
+        "441": {
+            "title": "SSH-Snake, 네트워크 침해 위해 SSH 키 노리는 은밀한 멀웨어…주의",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=153746",
+            "keyword": [
+                "악성코드"
+            ]
+        },
+        "442": {
+            "title": "사이버 범죄자들이 정교한 뱅킹 트로이목마 공격에 구글 클라우드 런 악용",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=153741",
+            "keyword": [
+                "악성코드",
+                "클라우드"
+            ]
+        },
+        "450": {
+            "title": "무선 충전기와 스마트폰 보안취약점 악용 ‘VoltSchemer’ 공격 공개돼",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=153730",
+            "keyword": [
+                "제로데이",
+                "IoT"
+            ]
+        },
+        "453": {
+            "title": "엔데믹으로 동남아 여행 증가하며 크리덴셜 유출 증가",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=153721",
+            "keyword": [
+                "데이터 및 자산 유출"
+            ]
+        },
+        "455": {
+            "title": "“최근 APT 공격들, 파워쉘 명령 통해 파일리스 형태로 은밀한 공격이 특징”",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=153717",
+            "keyword": [
+                "악성코드",
+                "공격 표면",
+                "핵티비즘"
+            ]
+        },
+        "460": {
+            "title": "글로벌 경찰, 락빗 랜섬웨어 네트워크 차단",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=153703",
+            "keyword": [
+                "랜섬웨어"
+            ]
+        },
+        "468": {
+            "title": "국내 유명 골프장, 사이버공격으로 이용객 개인정보 유출…스팸문자 등 2차 피해 주의",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=153775",
+            "keyword": [
+                "데이터 및 자산 유출"
+            ]
+        },
+        "469": {
+            "title": "락빗 랜섬웨어 개발자들, 법 집행 기관 단속 전에 차세대 암호화툴 개발 중",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=153763",
+            "keyword": [
+                "랜섬웨어"
+            ]
+        },
+        "471": {
+            "title": "캑터스 랜섬웨어 조직, 슈나이더 일렉트릭 1.5TB 데이터 탈취 주장",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=153761",
+            "keyword": [
+                "랜섬웨어",
+                "데이터 및 자산 유출",
+                "OT"
+            ]
+        },
+        "486": {
+            "title": "인섬니악 게임즈, 랜섬웨어 공격으로 대규모 데이터 유출 사고 발생",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=153810",
+            "keyword": [
+                "랜섬웨어",
+                "데이터 및 자산 유출"
+            ]
+        },
+        "487": {
+            "title": "해커, 엑시 인피니티 창업자 이더리움 코인 해킹해 1천만 달러 탈취",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=153808",
+            "keyword": [
+                "가상자산",
+                "데이터 및 자산 유출"
+            ]
+        },
+        "491": {
+            "title": "FTC, 어베스트의 불법 데이터 수집·판매에 1,650만 달러 벌금과 데이터 판매 금지 명령",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=153805",
+            "keyword": [
+                "데이터 및 자산 유출"
+            ]
+        },
+        "514": {
+            "title": "마이크로스트레티지 X계정 해킹으로 피싱 공격…44만 달러 이상 가상화폐 도난",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=153853",
+            "keyword": [
+                "가상자산",
+                "피싱"
+            ]
+        },
+        "522": {
+            "title": "\"계정 유효성 확인\" 사칭해 기업 계정정보 노리는 피싱 메일 주의",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=153921",
+            "keyword": [
+                "피싱",
+                "데이터 및 자산 유출"
+            ]
+        },
+        "525": {
+            "title": "윈도우와 리눅스 시스템에 새로운 위협 등장…Xeno RAT와 Nood RAT 주의",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=153905",
+            "keyword": [
+                "악성코드"
+            ]
+        },
+        "527": {
+            "title": "티센크루프 공장, 랜섬웨어 공격 당해 IT시스템 중단",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=153903",
+            "keyword": [
+                "랜섬웨어",
+                "데이터 및 자산 유출",
+                "OT"
+            ]
+        },
+        "555": {
+            "title": "러시아 정부 후원 APT29 공격그룹, 클라우드 기반 인프라 침투 공격에 집중",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=153934",
+            "keyword": [
+                "공격 표면",
+                "클라우드",
+                "핵티비즘"
+            ]
+        },
+        "556": {
+            "title": "의료기관 타깃 블랙캣 랜섬웨어 표적 공격 주의보 발령",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=153932",
+            "keyword": [
+                "랜섬웨어",
+                "데이터 및 자산 유출",
+                "OT"
+            ]
+        },
+        "577": {
+            "title": "네이버 사칭 피싱사이트 발견...근원지 클렙엔터테인먼트 사이트",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=154006",
+            "keyword": [
+                "피싱",
+                "데이터 및 자산 유출"
+            ]
+        }
+    },
+    "03월": {
+        "569": {
+            "title": "北 해킹조직, 국내 반도체 장비업체 대상 ‘해킹시도’…설계도면ㆍ현장사진 등 탈취",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=154028",
+            "keyword": [
+                "공격 표면",
+                "데이터 및 자산 유출",
+                "핵티비즘"
+            ]
+        },
+        "572": {
+            "title": "가상화폐 기업 타깃 정교한 피싱 공격 ‘크립토카멜레온’ 주의",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=154011",
+            "keyword": [
+                "가상자산",
+                "피싱",
+                "데이터 및 자산 유출"
+            ]
+        },
+        "586": {
+            "title": "북한 해킹그룹, 국내 가상화폐 및 포털 사이트 접근 계정 탈취 정황 포착",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=154097",
+            "keyword": [
+                "가상자산",
+                "데이터 및 자산 유출",
+                "핵티비즘"
+            ]
+        },
+        "587": {
+            "title": "\"상장 예정기업 공모주 신청\" 내용으로 유포 중인 다양한 피싱 문자 주의",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=154094",
+            "keyword": [
+                "피싱"
+            ]
+        },
+        "614": {
+            "title": "고스트섹-스토머스 랜섬웨어 조직, 동맹 맺고 신종 서비스형 랜섬웨어 공격툴 개발…대규모 공격 예고",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=154109",
+            "keyword": [
+                "랜섬웨어",
+                "공격 표면"
+            ]
+        },
+        "615": {
+            "title": "[주의] 북한 킴수키 조직, 스크린커넥트 취약점 악용해 신종 토들러샤크 멀웨어 유포중",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=154108",
+            "keyword": [
+                "악성코드",
+                "제로데이",
+                "핵티비즘"
+            ]
+        },
+        "689": {
+            "title": "북한 라자루스 해킹그룹, 토네이도 캐시로 훔친 암호화폐 자금세탁",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=154370",
+            "keyword": [
+                "가상자산",
+                "데이터 및 자산 유출",
+                "핵티비즘",
+                "가상 자산"
+            ]
+        },
+        "734": {
+            "title": "후지쯔, 내부 시스템서 멀웨어 발견…대량의 데이터 유출 가능성 인정",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=154466",
+            "keyword": [
+                "악성코드",
+                "데이터 및 자산 유출"
+            ]
+        },
+        "735": {
+            "title": "해커, AT&amp;T 데이터라고 주장하며 7,100만명 개인정보 해킹 포럼에 공개해",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=154465",
+            "keyword": [
+                "데이터 및 자산 유출"
+            ]
+        },
+        "771": {
+            "title": "북한 APT37 해킹그룹의 RoKRAT 악성코드 변종, 국내 대북 관계자 타깃 공격 포착돼",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=154631",
+            "keyword": [
+                "악성코드",
+                "핵티비즘"
+            ]
+        },
+        "793": {
+            "title": "진화하는 더문 멀웨어 변종, 아수스 라우터 6천여대 감염…주의",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=154660",
+            "keyword": [
+                "악성코드",
+                "IoT"
+            ]
+        }
+    },
+    "04월": {
+        "832": {
+            "title": "스코틀랜드 의료기관 랜섬웨어 공격으로 환자 데이터 유출",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=154803",
+            "keyword": [
+                "랜섬웨어",
+                "데이터 및 자산 유출"
+            ]
+        },
+        "833": {
+            "title": "푸르덴셜 보험사, 3만6천명 개인정보 유출…AlphV 랜섬웨어 조직 소행",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=154788",
+            "keyword": [
+                "랜섬웨어",
+                "데이터 및 자산 유출"
+            ]
+        },
+        "835": {
+            "title": "판다바이 쇼핑몰, 130만명 고객 데이터 유출…해커, API 취약점 악용해 공격",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=154785",
+            "keyword": [
+                "데이터 및 자산 유출",
+                "공격 표면",
+                "제로데이"
+            ]
+        },
+        "837": {
+            "title": "맥OS 사용자 타깃 멀웨어 유포중…가상화폐 종사자 주의",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=154775",
+            "keyword": [
+                "악성코드",
+                "가상자산"
+            ]
+        },
+        "838": {
+            "title": "진화된 원격 제어 기능으로 돌아온 ‘불투르’ 안드로이드 RAT 악성코드",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=154774",
+            "keyword": [
+                "악성코드",
+                "모바일"
+            ]
+        },
+        "839": {
+            "title": "통신사 AT&amp;T, 7,300만 명 개인정보 데이터 유출 확인돼",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=154773",
+            "keyword": [
+                "데이터 및 자산 유출"
+            ]
+        },
+        "848": {
+            "title": "중국 해킹그룹이 은밀히 사용하는 신종 멀웨어 ‘UNAPIMON’ 발견돼",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=154857",
+            "keyword": [
+                "악성코드",
+                "공격 표면",
+                "핵티비즘"
+            ]
+        },
+        "857": {
+            "title": "OWASP 재단, 회원들 데이터 유출 사고 발생...2차 피해 주의",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=154823",
+            "keyword": [
+                "데이터 및 자산 유출",
+                "공격 표면"
+            ]
+        },
+        "863": {
+            "title": "중국 해킹 그룹들, 이반티 취약점 악용해 미국 에너지·방위 산업 타깃 공격",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=154935",
+            "keyword": [
+                "공격 표면",
+                "제로데이",
+                "OT",
+                "핵티비즘"
+            ]
+        },
+        "879": {
+            "title": "랜섬웨어 공격그룹 SEXi, VMware ESXi 서버와 백업 표적 공격…주의",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=154883",
+            "keyword": [
+                "랜섬웨어",
+                "공격 표면",
+                "데이터 및 자산 유출"
+            ]
+        },
+        "905": {
+            "title": "인보이스 피싱 메일 활용한 다단계 멀웨어 공격 발견돼…주의",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=155024",
+            "keyword": [
+                "피싱",
+                "악성코드"
+            ]
+        },
+        "909": {
+            "title": "새로운 랜섬웨어 그룹 ‘랜섬허브’, 의료기관 해킹해 2,200만 달러 요구",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=155017",
+            "keyword": [
+                "랜섬웨어",
+                "데이터 및 자산 유출"
+            ]
+        },
+        "918": {
+            "title": "해커들, 이커머스 사이트에서 결제 데이터 탈취 위해 마젠토 취약점 악용중",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=154985",
+            "keyword": [
+                "데이터 및 자산 유출",
+                "공격 표면",
+                "제로데이"
+            ]
+        },
+        "920": {
+            "title": "심각한 취약점에 노출된 9만2천대 이상 디링크 NAS 장치…랜섬웨어 및 데이터 유출 주의",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=154983",
+            "keyword": [
+                "랜섬웨어",
+                "데이터 및 자산 유출",
+                "제로데이"
+            ]
+        },
+        "939": {
+            "title": "북한과 중국 해커그룹들, 인공지능 기술 활용해 사이버 공격 시도",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=155030",
+            "keyword": [
+                "AI",
+                "공격 표면",
+                "핵티비즘"
+            ]
+        },
+        "954": {
+            "title": "라다만티스 스틸러 활용한 TA547 피싱 공격 주의",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=155088",
+            "keyword": [
+                "피싱",
+                "악성코드"
+            ]
+        },
+        "962": {
+            "title": "북한 APT43(김수키) 그룹, 다단계 공격 체인 활용해 시그니처 백신 탐지 기술 회피",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=155200",
+            "keyword": [
+                "공격 표면",
+                "악성코드",
+                "핵티비즘"
+            ]
+        },
+        "980": {
+            "title": "팔로알토 네트웍스 방화벽 사용 기업들, 해킹 위협 주의…제로데이 취약점 악용해 공격중",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=155122",
+            "keyword": [
+                "공격 표면",
+                "제로데이"
+            ]
+        },
+        "986": {
+            "title": "VPN 및 SSH 서비스 표적으로 무차별 암호 대입 공격 급증…주의",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=155231",
+            "keyword": [
+                "공격 표면"
+            ]
+        },
+        "1017": {
+            "title": "아틀라시안 취약점 악용해 심각한 피해 일으키는 랜섬웨어 확산",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=155262",
+            "keyword": [
+                "랜섬웨어",
+                "제로데이"
+            ]
+        },
+        "1018": {
+            "title": "오픈 메타데이터와 레디스 및 도커 취약점 활용해 공격하는 해커들",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=155261",
+            "keyword": [
+                "공격 표면",
+                "제로데이"
+            ]
+        },
+        "1032": {
+            "title": "[긴급] 국내 항공사·간편결제 기업 등 이반티 제품 취약점 악용한 사이버 공격 정황 포착",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=155351",
+            "keyword": [
+                "공격 표면",
+                "제로데이"
+            ]
+        },
+        "1049": {
+            "title": "북한 IT 인력들, 글로벌 기업들에 취업 후 북한 해커들과 접선",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=155416",
+            "keyword": [
+                "인력",
+                "공급망",
+                "핵티비즘"
+            ]
+        },
+        "1055": {
+            "title": "북한 해커, 이스캔 안티바이러스 업데이트 악용해 멀웨어 유포..주의",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=155404",
+            "keyword": [
+                "악성코드",
+                "공격 표면",
+                "핵티비즘"
+            ]
+        },
+        "1079": {
+            "title": "악명높은 아키라 랜섬웨어 조직의 교활한 해킹 방법 드러나",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=155430",
+            "keyword": [
+                "랜섬웨어"
+            ]
+        },
+        "1080": {
+            "title": "러시아 해커 그룹, 미국 상하수도 처리시설에 대한 사이버 공격",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=155429",
+            "keyword": [
+                "공격 표면",
+                "공급망",
+                "OT",
+                "핵티비즘"
+            ]
+        },
+        "1096": {
+            "title": "북한 해커, 랜섬웨어로 스웨덴에서 주류 배달 지연",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=155548",
+            "keyword": [
+                "랜섬웨어",
+                "데이터 및 자산 유출",
+                "핵티비즘"
+            ]
+        }
+    },
+    "05월": {
+        "1104": {
+            "title": "[긴급 주의] 해킹 당한 국내 대학·기관 사이트 다수 발견, 접속시 불법 성인·도박 사이트로...2차 피해 우려",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=155639",
+            "keyword": [
+                "공격 표면",
+                "데이터 및 자산 유출"
+            ]
+        },
+        "1123": {
+            "title": "북한 해킹그룹, 취약한 이메일 보안 프로토콜 악용해 사이버 공격",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=155699",
+            "keyword": [
+                "공격 표면",
+                "피싱",
+                "악성코드",
+                "핵티비즘"
+            ]
+        },
+        "1202": {
+            "title": "블랙 바스타 랜섬웨어, 북미·유럽·호주 전역 500개 이상 기관 공격",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=155931",
+            "keyword": [
+                "랜섬웨어",
+                "데이터 및 자산 유출",
+                "공격 표면"
+            ]
+        },
+        "1203": {
+            "title": "델, 4천900만건 고객정보 유출…해커, API 취약점 악용해 공격",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=155926",
+            "keyword": [
+                "데이터 및 자산 유출",
+                "공격 표면",
+                "제로데이",
+                "공급망"
+            ]
+        },
+        "1236": {
+            "title": "러시아-우크라이나 해커들, 상대국 방송 및 언론사 해킹해 가짜 뉴스 전파",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=155944",
+            "keyword": [
+                "공격 표면",
+                "악성코드",
+                "핵티비즘",
+                "데이터 및 자산 유출"
+            ]
+        },
+        "1255": {
+            "title": "닛산 북미, 랜섬웨어 공격으로 5만3천여 건 직원 데이터 유출",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=155970",
+            "keyword": [
+                "랜섬웨어",
+                "데이터 및 자산 유출",
+                "공격 표면"
+            ]
+        },
+        "1259": {
+            "title": "40만 대 리눅스 서버 해킹한 에버리 봇넷 멀웨어",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=155966",
+            "keyword": [
+                "악성코드",
+                "공격 표면"
+            ]
+        },
+        "1261": {
+            "title": "위치타시, 락빗 랜섬웨어 공격으로 지방 정부 온라인 시스템 마비",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=156051",
+            "keyword": [
+                "랜섬웨어",
+                "공격 표면"
+            ]
+        },
+        "1264": {
+            "title": "북한 해커들, 페이스북 메신저 악용해 정교한 악성코드 공격 중",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=156046",
+            "keyword": [
+                "악성코드",
+                "피싱",
+                "공격 표면",
+                "핵티비즘"
+            ]
+        },
+        "1282": {
+            "title": "악명 높은 그란도레이로 뱅킹 악성코드 컴백…60개국 1,500개 은행 고객 계정 노려",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=156113",
+            "keyword": [
+                "악성코드",
+                "피싱",
+                "가상자산",
+                "데이터 및 자산 유출"
+            ]
+        },
+        "1283": {
+            "title": "CISA “크롬 및 디링크 보안취약점, 최근 사이버 공격에 악용” 경고",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=156111",
+            "keyword": [
+                "제로데이",
+                "공격 표면"
+            ]
+        },
+        "1295": {
+            "title": "최근 국내 제조·건설·교육 기관 타깃 안다리엘 해킹그룹 APT 공격 확인돼",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=156058",
+            "keyword": [
+                "공격 표면",
+                "악성코드",
+                "데이터 및 자산 유출",
+                "핵티비즘"
+            ]
+        },
+        "1297": {
+            "title": "의료 행정 서비스 제공업체 ‘웹TPA’, 해킹으로 240만 명 데이터 유출 당해",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=156056",
+            "keyword": [
+                "데이터 및 자산 유출",
+                "공격 표면"
+            ]
+        },
+        "1298": {
+            "title": "호주 의료기관, 랜섬웨어 공격으로 처방전 정보 대량 유출",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=156055",
+            "keyword": [
+                "랜섬웨어",
+                "데이터 및 자산 유출"
+            ]
+        },
+        "1300": {
+            "title": "중국 연계 ‘블랙테크’ 해킹그룹, 신종 RAT 공격툴 만들어 사이버 스파이 도구로 활용",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=156053",
+            "keyword": [
+                "악성코드",
+                "공격 표면",
+                "OT",
+                "공급망",
+                "핵티비즘"
+            ]
+        },
+        "1310": {
+            "title": "필리핀 정부 겨냥한 해커들의 랜섬웨어 공격 급증",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=156150",
+            "keyword": [
+                "랜섬웨어",
+                "공격 표면"
+            ]
+        },
+        "1311": {
+            "title": "갈라 게임즈, 해커에 2,200만 달러 이상 암호화폐 도난...해커 계좌 동결",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=156146",
+            "keyword": [
+                "가상자산",
+                "데이터 및 자산 유출"
+            ]
+        },
+        "1313": {
+            "title": "락빗 랜섬웨어 갱단, 캐나다 대형 약국 체인 공격...약국 폐쇄",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=156144",
+            "keyword": [
+                "랜섬웨어",
+                "공격 표면",
+                "데이터 및 자산 유출"
+            ]
+        },
+        "1337": {
+            "title": "취약한 드라이버 악용하는 정교한 암호화폐 채굴 캠페인 'REF4578' 발견… EDR 무력화",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=156184",
+            "keyword": [
+                "악성코드",
+                "공격 표면",
+                "가상자산"
+            ]
+        },
+        "1364": {
+            "title": "블러드알케미 악성코드, 동남아 정부 타깃으로 정교한 사이버 공격에 적극 활동돼",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=156298",
+            "keyword": [
+                "악성코드",
+                "공격 표면",
+                "핵티비즘"
+            ]
+        },
+        "1391": {
+            "title": "기프트 카드 해킹해 탈취하는 사이버 범죄 그룹 ‘Storm-0539’…다중 인증 체계 구축 중요",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=156324",
+            "keyword": [
+                "공격 표면",
+                "악성코드",
+                "피싱"
+            ]
+        },
+        "1392": {
+            "title": "클라우드플레어 워커스 악용한 AiTM 피싱 공격 캠페인 위협 증가",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=156317",
+            "keyword": [
+                "피싱",
+                "공격 표면"
+            ]
+        },
+        "1393": {
+            "title": "체크포인트 원격 액세스 VPN 사용기업 주의...취약점 노린 해킹 시도 확인돼",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=156316",
+            "keyword": [
+                "제로데이",
+                "공격 표면"
+            ]
+        },
+        "1440": {
+            "title": "체크포인트 VPN 심각한 제로데이 취약점 악용 공격 중...주의",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=156396",
+            "keyword": [
+                "제로데이",
+                "공격 표면"
+            ]
+        },
+        "1460": {
+            "title": "타오바오, 데이터 해킹당해 고객 수백만 명 개인정보 유출",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=156441",
+            "keyword": [
+                "데이터 및 자산 유출",
+                "공격 표면"
+            ]
+        }
+    },
+    "06월": {
+        "1443": {
+            "title": "“새로운 취약점 발견 후 4.76일 만에 공격…에너지, 의료, 제조 분야 타깃 공격 급증”",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=156492",
+            "keyword": [
+                "제로데이",
+                "OT",
+                "공격 표면"
+            ]
+        },
+        "1444": {
+            "title": "티켓마스터, 5억 6천만 명 개인정보 유출…샤이니헌터스 \"50만 달러에 판매할 것\"",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=156479",
+            "keyword": [
+                "데이터 및 자산 유출",
+                "공격 표면",
+                "규제"
+            ]
+        },
+        "1481": {
+            "title": "“외신 인터뷰 의뢰 사칭한 북한 김수키 해킹조직 공격 포착돼”",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=156598",
+            "keyword": [
+                "피싱",
+                "악성코드",
+                "인력",
+                "공격 표면",
+                "핵티비즘"
+            ]
+        },
+        "1488": {
+            "title": "러시아 48개 기관 해킹공격한 헬하운드 APT 그룹과 데코이 도그 멀웨어",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=156574",
+            "keyword": [
+                "악성코드",
+                "공격 표면",
+                "인력",
+                "핵티비즘"
+            ]
+        },
+        "1510": {
+            "title": "새로운 리눅스 변종 '타겟컴퍼니 랜섬웨어', VMware ESXi 사용자 타깃 공격",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=156613",
+            "keyword": [
+                "랜섬웨어",
+                "제로데이",
+                "클라우드",
+                "공격 표면",
+                "악성코드"
+            ]
+        },
+        "1512": {
+            "title": "우크라이나 타깃, 엑셀 매크로 기반 다단계 악성코드 공격",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=156611",
+            "keyword": [
+                "악성코드",
+                "공격 표면",
+                "피싱"
+            ]
+        },
+        "1539": {
+            "title": "\"北 위성 발사 실패에 따른 가상자산 해킹 활동 증가 정황 포착\"",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=156653",
+            "keyword": [
+                "가상자산",
+                "공격 표면",
+                "인력",
+                "악성코드",
+                "핵티비즘"
+            ]
+        },
+        "1577": {
+            "title": "블랙 바스타 랜섬웨어 그룹, 윈도우 제로데이 취약점 악용해 공격 확대...주의",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=156766",
+            "keyword": [
+                "랜섬웨어",
+                "제로데이",
+                "악성코드",
+                "공격 표면"
+            ]
+        },
+        "1578": {
+            "title": "2만개 이상 포티넷 '포티게이트' 中 해커에 해킹당해…포티넷 취약점 관리·대응에 문제 있어",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=156765",
+            "keyword": [
+                "공격 표면",
+                "공급망",
+                "제로데이",
+                "데이터 및 자산 유출",
+                "인력",
+                "핵티비즘"
+            ]
+        }
+    },
+    "07월": {
+        "1743": {
+            "title": "사용자가 직접 악성코드를 실행하도록 유도하는 피싱메일 발견",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=157381",
+            "keyword": [
+                "피싱",
+                "악성코드",
+                "공격 표면"
+            ]
+        },
+        "1765": {
+            "title": "중국 연계 사이버 스파이 그룹 Velvet Ant, 시스코 NX-OS 제로데이 취약점 악용해 공격...주의",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=157415",
+            "keyword": [
+                "제로데이",
+                "공격 표면",
+                "악성코드",
+                "공급망"
+            ]
+        },
+        "1787": {
+            "title": "헬스에퀴티, 해킹당해 고객 의료 데이터 유출",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=157462",
+            "keyword": [
+                "데이터 및 자산 유출",
+                "공격 표면",
+                "악성코드",
+                "규제"
+            ]
+        },
+        "1789": {
+            "title": "해외 금융 노리는 악성 앱 발견...금융소비자 주의 필요",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=157458",
+            "keyword": [
+                "악성코드",
+                "모바일",
+                "공격 표면"
+            ]
+        },
+        "1797": {
+            "title": "프루덴셜 파이낸셜, 250만명 개인정보 탈취당해…알파브 랜섬웨어 그룹 소행",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=157434",
+            "keyword": [
+                "랜섬웨어",
+                "데이터 및 자산 유출",
+                "공격 표면"
+            ]
+        },
+        "1801": {
+            "title": "파텔코 크레딧 유니온, 랜섬웨어 공격으로 고객 서비스 중단 사태 발생",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=157525",
+            "keyword": [
+                "랜섬웨어",
+                "데이터 및 자산 유출",
+                "공격 표면"
+            ]
+        },
+        "1831": {
+            "title": "Gogs Git 서비스의 심각한 보안 취약점 발견돼",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=157552",
+            "keyword": [
+                "제로데이",
+                "공격 표면",
+                "공급망"
+            ]
+        },
+        "1833": {
+            "title": "클라우드플레어 DNS 해킹으로 70개국 300개 네트워크 장애발생해",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=157550",
+            "keyword": [
+                "공격 표면",
+                "클라우드",
+                "사이버복원력"
+            ]
+        },
+        "1834": {
+            "title": "신종 엘도라도 랜섬웨어, 윈도우와 브이엠웨어 가상머신 타깃으로 확산 중…주의",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=157546",
+            "keyword": [
+                "랜섬웨어",
+                "악성코드",
+                "공격 표면",
+                "클라우드"
+            ]
+        },
+        "1878": {
+            "title": "파리 올림픽 가짜 티켓 판매 사기 피싱사이트 기승…주의",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=157631",
+            "keyword": [
+                "피싱",
+                "공격 표면",
+                "데이터 및 자산 유출"
+            ]
+        },
+        "1879": {
+            "title": "“60만 건의 신용카드 정보 유출돼 다크 웹에서 거래“",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=157630",
+            "keyword": [
+                "데이터 및 자산 유출",
+                "공격 표면"
+            ]
+        },
+        "1887": {
+            "title": "AT&amp;T, 1억 900만 고객 통화 기록도 유출돼",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=157725",
+            "keyword": [
+                "데이터 및 자산 유출",
+                "공격 표면"
+            ]
+        },
+        "1888": {
+            "title": "팔로알토네트웍스 제품에 심각한 5개 보안취약점 주의",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=157723",
+            "keyword": [
+                "제로데이",
+                "공격 표면",
+                "공급망"
+            ]
+        },
+        "1934": {
+            "title": "CISA, 지오서버 지오툴 플러그인에 심각한 원격 코드 실행 취약점 경고",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=157813",
+            "keyword": [
+                "제로데이",
+                "공격 표면"
+            ]
+        },
+        "1935": {
+            "title": "트렐로 사용자 비상, 1500만 명 이메일 주소 유출...해킹 포럼에 공개돼",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=157812",
+            "keyword": [
+                "데이터 및 자산 유출",
+                "공격 표면"
+            ]
+        },
+        "1936": {
+            "title": "APT INC 공격그룹, VMware ESXi 서버 노리는 SEXi 랜섬웨어 계속 진화시켜 공격",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=157802",
+            "keyword": [
+                "랜섬웨어",
+                "악성코드",
+                "공격 표면",
+                "클라우드"
+            ]
+        },
+        "1938": {
+            "title": "이란 머디워터 사이버해킹그룹, 웨비나 초대장 위장해 악성코드 유포…아시아까지 공격 확대",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=157801",
+            "keyword": [
+                "악성코드",
+                "피싱",
+                "공격 표면"
+            ]
+        },
+        "1941": {
+            "title": "[사건 전말] 2만9천여 고객 보유한 크라우드스트라이크, 보안패치 체계 신뢰성에 치명타…대규모 피해 보상 주목",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=157919",
+            "keyword": [
+                "공격 표면",
+                "공급망",
+                "사이버복원력"
+            ]
+        },
+        "1943": {
+            "title": "[긴급2보] 크라우드스트라이크 업데이트로 전세계 은행·항공·방송사 등 피해 속출…주가 하락",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=157917",
+            "keyword": [
+                "공격 표면",
+                "공급망",
+                "사이버복원력"
+            ]
+        },
+        "1945": {
+            "title": "[긴급] 크라우드스트라이크 업데이트로 인한 글로벌 BSOD 대란 발생…윈도우 10 사용 기업 비상",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=157910",
+            "keyword": [
+                "공격 표면",
+                "공급망",
+                "사이버복원력"
+            ]
+        },
+        "1949": {
+            "title": "북한 해킹그룹, 맥OS 사용자 겨냥한 악성코드 제작…주의",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=157887",
+            "keyword": [
+                "악성코드",
+                "공격 표면",
+                "인력"
+            ]
+        },
+        "1964": {
+            "title": "크라우드스트라이크, 6월에도 팔콘 업데이트시 리눅스에 심각한 피해 입혀...미흡한 테스트가 원인",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=157975",
+            "keyword": [
+                "공격 표면",
+                "공급망",
+                "사이버복원력"
+            ]
+        },
+        "1978": {
+            "title": "[긴급] 크라우드스트라이크발 최악의 IT 대란, 해커들 이 틈 이용해 피해 기업들 대상 해킹 시도중...업데이트시 주의",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=157922",
+            "keyword": [
+                "공격 표면",
+                "공급망",
+                "사이버복원력"
+            ]
+        },
+        "1979": {
+            "title": "영국 경찰, MGM 리조트 해킹 사건 연루된 17세 용의자 체포",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=157921",
+            "keyword": [
+                "데이터 및 자산 유출",
+                "공격 표면",
+                "인력"
+            ]
+        },
+        "1980": {
+            "title": "호주 최대 데이터 유출 사건, 메디시큐어 랜섬웨어 해킹으로 1,290만 명 개인정보 유출",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=157920",
+            "keyword": [
+                "랜섬웨어",
+                "데이터 및 자산 유출",
+                "공격 표면"
+            ]
+        },
+        "1982": {
+            "title": "지워도 지워도 살아나는 악성코드…스왑 파일에 숨어있는 신용카드 스키머 주의",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=158027",
+            "keyword": [
+                "악성코드",
+                "공격 표면",
+                "데이터 및 자산 유출"
+            ]
+        },
+        "1987": {
+            "title": "햄스터 콤뱃, 사이버 공격 표적 돼...악성코드 유포 기승",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=158022",
+            "keyword": [
+                "악성코드",
+                "공격 표면"
+            ]
+        },
+        "1988": {
+            "title": "악명 높은 해킹포럼 '브리치포럼' v1 전체 데이터베이스 유출돼",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=158020",
+            "keyword": [
+                "데이터 및 자산 유출",
+                "공격 표면"
+            ]
+        },
+        "1994": {
+            "title": "[주의] 최악의 IT 대란 일으킨 크라우드스트라이크 사칭 피싱 공격 및 악성코드 유포 계속돼",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=158005",
+            "keyword": [
+                "피싱",
+                "악성코드",
+                "공격 표면"
+            ]
+        },
+        "1998": {
+            "title": "미국, 상수도 및 에너지 인프라 공격한 러시아 해커에 제재",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=157984",
+            "keyword": [
+                "OT",
+                "공격 표면",
+                "전략"
+            ]
+        },
+        "2033": {
+            "title": "러시아, 다크넷 시장 95% 점유…북한, 가상화폐 해킹으로 지난해 10억 달러 탈취",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=158100",
+            "keyword": [
+                "가상자산",
+                "공격 표면",
+                "데이터 및 자산 유출"
+            ]
+        },
+        "2036": {
+            "title": "미국, 북한 해커 ‘림종혁’ 체포 정보 제공자에 1,000만 달러 포상금 걸어",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=158089",
+            "keyword": [
+                "인력",
+                "공격 표면",
+                "가상자산"
+            ]
+        },
+        "2037": {
+            "title": "中 해킹그룹 APT41, 물류·미디어·엔터·기술·자동차 분야 기업 대상 표적 공격 중",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=158087",
+            "keyword": [
+                "공격 표면",
+                "공급망",
+                "악성코드"
+            ]
+        },
+        "2045": {
+            "title": "포춘 50대 기업중 한 곳, 다크 엔젤스 랜섬웨어에 7천5백만 달러 지불...사상 최고액 피해",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=158186",
+            "keyword": [
+                "랜섬웨어",
+                "데이터 및 자산 유출",
+                "공격 표면"
+            ]
+        }
+    },
+    "08월": {
+        "2063": {
+            "title": "중국 해커 그룹 'Evasive Panda', ISP 해킹 후 악성코드 유포",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=158266",
+            "keyword": [
+                "악성코드",
+                "공격 표면"
+            ]
+        },
+        "2064": {
+            "title": "신종 안드로이드 뱅킹 악성코드 ‘빙고모드’ 발견…돈 훔치고 기기 초기화",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=158265",
+            "keyword": [
+                "악성코드",
+                "모바일",
+                "데이터 및 자산 유출"
+            ]
+        },
+        "2066": {
+            "title": "신종 사이버위협, 급증하는 클라우드플레어 터널 악용 공격…주의",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=158261",
+            "keyword": [
+                "공격 표면",
+                "클라우드",
+                "악성코드"
+            ]
+        },
+        "2067": {
+            "title": "암호화폐 투자자 대상, 암호화폐 거래소 직원 사칭 정교한 사기 범죄 증가",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=158257",
+            "keyword": [
+                "가상자산",
+                "피싱",
+                "데이터 및 자산 유출"
+            ]
+        },
+        "2069": {
+            "title": "북한 해커 조직, 소프트웨어 개발자 타깃 DEV#POPPER 악성코드 공격 중..주의",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=158222",
+            "keyword": [
+                "악성코드",
+                "공격 표면"
+            ]
+        },
+        "2070": {
+            "title": "마이크로소프트, 9시간 동안 글로벌 서비스 장애는 DDoS 공격 때문",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=158217",
+            "keyword": [
+                "공격 표면",
+                "사이버복원력"
+            ]
+        },
+        "2083": {
+            "title": "북한 해커 그룹 '문스톤 슬릿', 악성 npm 패키지로 윈도우 사용자 공격",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=158331",
+            "keyword": [
+                "악성코드",
+                "공격 표면"
+            ]
+        },
+        "2084": {
+            "title": "IT 직원 타깃 공격하는 헌터스 인터내셔널 랜섬웨어 그룹, 신종 RAT 유포중...주의",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=158330",
+            "keyword": [
+                "랜섬웨어",
+                "악성코드",
+                "공격 표면"
+            ]
+        },
+        "2089": {
+            "title": "NPD 역대 최대 30억 명 개인 데이터 유출…데이터 산업에 큰 영향",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=158307",
+            "keyword": [
+                "데이터 및 자산 유출"
+            ]
+        },
+        "2090": {
+            "title": "로크웰 오토메이션 기기서 발견된 치명적 보안 결함 ‘CVE-2024-6242’ 주의",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=158306",
+            "keyword": [
+                "제로데이",
+                "OT",
+                "공격 표면"
+            ]
+        },
+        "2093": {
+            "title": "리눅스 커널을 공격할 수 있는 새로운 보안위협 ‘SLUBStick’ 발견돼",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=158301",
+            "keyword": [
+                "제로데이",
+                "공격 표면"
+            ]
+        },
+        "2108": {
+            "title": "서버리스 인프라 취약점 악용하는 사이버 공격 증가",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=158390",
+            "keyword": [
+                "공격 표면",
+                "클라우드"
+            ]
+        },
+        "2112": {
+            "title": "인터폴, BEC 공격으로부터 4천만 달러 이상 회수 성공",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=158359",
+            "keyword": [
+                "피싱",
+                "데이터 및 자산 유출"
+            ]
+        },
+        "2116": {
+            "title": "[긴급] 사이버 공격자들, 클라우드플레어 터널 악용해 RAT 유포 급증…주의",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=158352",
+            "keyword": [
+                "공격 표면",
+                "클라우드",
+                "악성코드"
+            ]
+        },
+        "2132": {
+            "title": "[긴급] “업데이트된 윈도우 시스템 보안 무너뜨릴 수 있는 2개 제로데이 취약점 공개...다운그레이드 공격 위험성”",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=158444",
+            "keyword": [
+                "제로데이",
+                "공격 표면"
+            ]
+        },
+        "2134": {
+            "title": "북한 IT 인력, 미국과 영국 기업서 일 할 수 있도록 돕고 이익 취한 남성 기소돼...최대 20년형",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=158441",
+            "keyword": [
+                "인력",
+                "공격 표면"
+            ]
+        },
+        "2135": {
+            "title": "[긴급] 많은 기업이 사용하는 오픈소스 ERP 시스템 '아파치 OFBiz'에 심각한 보안취약점...사이버공격 주의",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=158440",
+            "keyword": [
+                "제로데이",
+                "공급망",
+                "공격 표면"
+            ]
+        },
+        "2136": {
+            "title": "구형 시스코 IP 폰에 치명적 제로데이 취약점 발견...업그레이드 필수",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=158438",
+            "keyword": [
+                "제로데이",
+                "공격 표면"
+            ]
+        },
+        "2141": {
+            "title": "2024년 DDoS 공격 46% ↑…게임·기술 산업 집중 타격",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=158541",
+            "keyword": [
+                "공격 표면"
+            ]
+        },
+        "2145": {
+            "title": "안랩, 2024년 2분기 피싱 이메일 동향 발표…결제∙배송 키워드 악용↑",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=158523",
+            "keyword": [
+                "피싱"
+            ]
+        },
+        "2149": {
+            "title": "태양광 관리 플랫폼 주요 보안취약점 발견돼…대규모 정전 발생 우려",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=158514",
+            "keyword": [
+                "제로데이",
+                "OT",
+                "공격 표면"
+            ]
+        },
+        "2151": {
+            "title": "사상 최대 규모의 데이터 유출, 27억 건 개인정보 유출 사건 발생",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=158512",
+            "keyword": [
+                "데이터 및 자산 유출"
+            ]
+        },
+        "2165": {
+            "title": "최근 노출된 .env 파일 악용해 수천 개 기업 사이버공격한 정황 포착",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=158589",
+            "keyword": [
+                "공격 표면",
+                "공급망"
+            ]
+        },
+        "2167": {
+            "title": "[긴급] 솔라윈즈, 웹 헬프 데스크 소프트웨어의 치명적 보안취약점 주의...침해사고 발생 우려",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=158587",
+            "keyword": [
+                "제로데이",
+                "공격 표면"
+            ]
+        },
+        "2170": {
+            "title": "\"랜섬허브, EDR 보안솔루션 무력화시키는 신종 악성코드 유포중\"",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=158567",
+            "keyword": [
+                "악성코드",
+                "공격 표면"
+            ]
+        },
+        "2171": {
+            "title": "“가상자산 거래소로 몰리는 해커…피해액 84% 급증”",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=158566",
+            "keyword": [
+                "가상자산",
+                "공격 표면",
+                "데이터 및 자산 유출"
+            ]
+        },
+        "2176": {
+            "title": "이반티 가상 트래픽 매니저에 심각한 보안취약점 발견…관리자 계정 탈취 위험",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=158549",
+            "keyword": [
+                "제로데이",
+                "공격 표면",
+                "데이터 및 자산 유출"
+            ]
+        },
+        "2180": {
+            "title": "마이크로소프트, 90개 보안취약점 패치...10개 치명적 제로데이 취약점 포함",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=158545",
+            "keyword": [
+                "제로데이"
+            ]
+        },
+        "2186": {
+            "title": "북한 해킹 그룹이 유포중인 신종 맥OS 악성코드 'TodoSwift' 발견돼...주의",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=158686",
+            "keyword": [
+                "악성코드",
+                "공격 표면",
+                "인력"
+            ]
+        },
+        "2189": {
+            "title": "오라클 넷스위트 취약점으로 인한 고객 정보 유출 위험 발견",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=158644",
+            "keyword": [
+                "제로데이",
+                "공격 표면",
+                "데이터 및 자산 유출"
+            ]
+        },
+        "2193": {
+            "title": "도요타, 240GB 데이터 유출 확인…제로세븐그룹 소행",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=158641",
+            "keyword": [
+                "데이터 및 자산 유출",
+                "공격 표면"
+            ]
+        },
+        "2195": {
+            "title": "북한 해커 그룹 라자루스, 윈도우 AFD.sys 드라이버 제로데이 취약점 악용",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=158639",
+            "keyword": [
+                "제로데이",
+                "악성코드",
+                "공격 표면"
+            ]
+        },
+        "2203": {
+            "title": "세계적 석유 서비스 기업 할리버튼, 사이버 공격으로 시스템 침해당해",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=158767",
+            "keyword": [
+                "공격 표면",
+                "데이터 및 자산 유출"
+            ]
+        },
+        "2204": {
+            "title": "미국 아마추어 무선 연맹, 랜섬웨어 공격으로 100만 달러 몸값 지불",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=158766",
+            "keyword": [
+                "랜섬웨어",
+                "공격 표면",
+                "데이터 및 자산 유출"
+            ]
+        },
+        "2205": {
+            "title": "맥OS 노린 새로운 악성코드 '크툴루 스틸러' 발견, 맥 사용자 정보탈취 목적",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=158765",
+            "keyword": [
+                "악성코드",
+                "공격 표면",
+                "데이터 및 자산 유출"
+            ]
+        },
+        "2207": {
+            "title": "솔라윈즈, 치명적 보안취약점 긴급 패치 배포",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=158763",
+            "keyword": [
+                "제로데이",
+                "공격 표면",
+                "공급망"
+            ]
+        },
+        "2208": {
+            "title": "대량으로 구글 크롬브라우저 자격증명 탈취하는 칠린 랜섬웨어 그룹 등장",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=158762",
+            "keyword": [
+                "랜섬웨어",
+                "악성코드",
+                "공격 표면"
+            ]
+        },
+        "2214": {
+            "title": "은행 사용자 타깃 진보된 웹앱 공격 급증...주의",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=158724",
+            "keyword": [
+                "공격 표면",
+                "피싱",
+                "악성코드"
+            ]
+        },
+        "2215": {
+            "title": "구글 크롬, 또 다른 제로데이 취약점 발견...실제 사이버 공격에 사용돼",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=158723",
+            "keyword": [
+                "제로데이",
+                "공격 표면"
+            ]
+        },
+        "2229": {
+            "title": "2022년부터 몰래 활동해온 리눅스 악성코드 ‘sedexp’ 발견...금융 범죄에 주로 악용돼",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=158811",
+            "keyword": [
+                "악성코드",
+                "공격 표면"
+            ]
+        },
+        "2242": {
+            "title": "QR코드 피싱 공격, 마이크로소프트 Sway 악용해 MS 365 자격 증명 탈취…주의",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=158886",
+            "keyword": [
+                "피싱",
+                "공격 표면",
+                "데이터 및 자산 유출"
+            ]
+        },
+        "2243": {
+            "title": "[긴급] 아파치 OFBiz 치명적 보안취약점, 사이버공격에 악용중…긴급 점검 필수",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=158885",
+            "keyword": [
+                "제로데이",
+                "공격 표면",
+                "공급망"
+            ]
+        },
+        "2254": {
+            "title": "중국 APT 그룹 '볼트 타이푼', 버사 디렉터 제로데이 취약점 악용해 기업들 공격",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=158851",
+            "keyword": [
+                "제로데이",
+                "공격 표면",
+                "악성코드"
+            ]
+        },
+        "2255": {
+            "title": "소프트웨어 공급업체 영컨설팅, 블랙슈트 랜섬웨어에 공격당해 95만명 개인정보 유출",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=158849",
+            "keyword": [
+                "랜섬웨어",
+                "데이터 및 자산 유출",
+                "공격 표면"
+            ]
+        },
+        "2268": {
+            "title": "이셋 “한국 해커 그룹 APT-C-60, WPS 오피스 제로데이 취약점 악용해 스파이웨어 배포” 주장",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=158922",
+            "keyword": [
+                "제로데이",
+                "공격 표면",
+                "악성코드"
+            ]
+        },
+        "2300": {
+            "title": "스캠 범죄자들, 광범위한 폰지 사기에서 특정 대상 노린 '돼지 도살 스캠'으로 전환",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=158969",
+            "keyword": [
+                "피싱",
+                "데이터 및 자산 유출"
+            ]
+        }
+    },
+    "09월": {
+        "2297": {
+            "title": "가짜 팔로알토네트웍스 글로벌프로텍트로 위장한 악성코드 발견",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=158972",
+            "keyword": [
+                "악성코드",
+                "공격 표면"
+            ]
+        },
+        "2298": {
+            "title": "북한 라자루스 하위 그룹인 '시트린 슬릿' 해커 그룹, 크롬 제로데이 취약점 악용해 가상화폐 조직 타깃 공격",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=158971",
+            "keyword": [
+                "제로데이",
+                "악성코드",
+                "가상자산",
+                "공격 표면"
+            ]
+        },
+        "2320": {
+            "title": "추석 명절을 악용한 피싱-스미싱 공격 증가",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=159035",
+            "keyword": [
+                "피싱",
+                "데이터 및 자산 유출"
+            ]
+        },
+        "2335": {
+            "title": "레코디드퓨처, “북한 해커 그룹 암호화폐 해킹에 주력...17억 달러 탈취해 군사 예산 충당”",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=159102",
+            "keyword": [
+                "가상자산",
+                "데이터 및 자산 유출",
+                "인력"
+            ]
+        },
+        "2358": {
+            "title": "해커가 해커를 해킹...온리팬스 계정 탈취하려다 악성코드 감염돼",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=159161",
+            "keyword": [
+                "악성코드",
+                "데이터 및 자산 유출"
+            ]
+        },
+        "2365": {
+            "title": "해커들, 4개 마이크로소프트 취약점 악용해 사이버 공격...헬스케어, 금융, 정부기관 타깃",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=159370",
+            "keyword": [
+                "제로데이",
+                "공격 표면",
+                "데이터 및 자산 유출"
+            ]
+        },
+        "2366": {
+            "title": "이반티, 치명적 취약점 패치 공개…CVSS 점수 10으로 매우 심각",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=159368",
+            "keyword": [
+                "제로데이",
+                "공격 표면"
+            ]
+        },
+        "2367": {
+            "title": "드래곤랭크, 한국과 아시아 및 유럽 타깃 사이버공격 캠페인 확인돼",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=159365",
+            "keyword": [
+                "공격 표면",
+                "악성코드"
+            ]
+        },
+        "2368": {
+            "title": "어도비, 치명적 아크로뱃 리더 제로데이 취약점 수정…긴급 업데이트 권고",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=159361",
+            "keyword": [
+                "제로데이",
+                "공격 표면"
+            ]
+        },
+        "2377": {
+            "title": "북한 해커들, 링크드인 구인 광고로 위장해 신종 코버트캐치 악성코드 유포중",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=159258",
+            "keyword": [
+                "악성코드",
+                "공격 표면",
+                "인력"
+            ]
+        },
+        "2378": {
+            "title": "에어갭 시스템 해킹해 데이터 탈취할 수 있는 RAMBO 공격 방법 발표돼",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=159257",
+            "keyword": [
+                "OT",
+                "공격 표면",
+                "데이터 및 자산 유출"
+            ]
+        },
+        "2379": {
+            "title": "[긴급] 소닉월 SSLVPN 취약점, 사이버 공격에 악용…즉각 패치 적용해야",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=159256",
+            "keyword": [
+                "제로데이",
+                "공격 표면"
+            ]
+        },
+        "2391": {
+            "title": "싱가포르 경찰, 중국 사이버 범죄 조직 일당 6명 체포",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=159420",
+            "keyword": [
+                "인력",
+                "데이터 및 자산 유출"
+            ]
+        },
+        "2392": {
+            "title": "포티넷, 클라우드 기반 서비스 해킹당해 440GB 데이터 유출",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=159415",
+            "keyword": [
+                "클라우드",
+                "데이터 및 자산 유출"
+            ]
+        },
+        "2420": {
+            "title": "북한 해킹그룹, 링크드인 통한 가상화폐 업계 타깃 악성코드 'RustDoor' 공격",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=159448",
+            "keyword": [
+                "악성코드",
+                "공격 표면",
+                "가상자산"
+            ]
+        },
+        "2491": {
+            "title": "QR코드 피싱 공격 신종 ‘Quishing 2.0’…보안솔루션 우회 공격 주의",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=159666",
+            "keyword": [
+                "피싱",
+                "데이터 및 자산 유출",
+                "공격 표면"
+            ]
+        },
+        "2492": {
+            "title": "노드VPN과 구글 크롬으로 위장한 안드로이드 악성코드 'Octo2' 위협 급증",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=159665",
+            "keyword": [
+                "악성코드",
+                "모바일",
+                "공격 표면"
+            ]
+        },
+        "2493": {
+            "title": "구글 플레이 통해 1,100만 대 안드로이드 기기 감염시킨 악성코드 'Necro' 확산…주의",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=159664",
+            "keyword": [
+                "악성코드",
+                "모바일",
+                "공격 표면"
+            ]
+        },
+        "2501": {
+            "title": "챗GPT 맥OS 취약점 주의, 'SpAIware' 통해 민감 정보유출과 허위 정보 주입 가능해",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=159747",
+            "keyword": [
+                "제로데이",
+                "데이터 및 자산 유출",
+                "악성코드"
+            ]
+        },
+        "2503": {
+            "title": "\"산업제어시스템 노린 비교적 단순한 수법의 해킹 공격 급증\" 경고",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=159743",
+            "keyword": [
+                "OT",
+                "공격 표면"
+            ]
+        },
+        "2510": {
+            "title": "“딥페이크 스캠 및 피싱 공격 급증”",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=159722",
+            "keyword": [
+                "피싱",
+                "데이터 및 자산 유출"
+            ]
+        },
+        "2531": {
+            "title": "신종 데이터 탈취 악성코드 'SnipBot' 등장…RomCom 변종 위협 확산",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=159772",
+            "keyword": [
+                "악성코드",
+                "데이터 및 자산 유출"
+            ]
+        },
+        "2532": {
+            "title": "기아차 딜러 포털에 치명적 보안취약점, 수백만 대 차량 원격 해킹 위협 드러나",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=159771",
+            "keyword": [
+                "제로데이",
+                "공격 표면",
+                "OT"
+            ]
+        },
+        "2536": {
+            "title": "운송·물류 기업 타깃 사이버 공격 급증, 이메일 계정 탈취해 정교한 악성코드 공격 시도",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=159755",
+            "keyword": [
+                "악성코드",
+                "공격 표면",
+                "피싱"
+            ]
+        },
+        "2559": {
+            "title": "북한 해커들의 위장 취업 급증…기업에 심각한 보안 위협",
+            "link": "https://www.dailysecu.com/news/articleView.html?idxno=159806",
+            "keyword": [
+                "인력",
+                "공격 표면"
+            ]
+        }
+    }
+}
+</code></pre></div></div>
+
+<h1 id="결론">결론</h1>
+<p>본 연구는 2024년 초 보안 전문가들이 제시한 사이버 보안 트렌드 전망과 2024년 1월부터 10월까지 발생한 주요 사이버 공격 사건들을 비교 분석함으로써, 실제 보안 동향이 예측과 어느 정도 일치했는지 검토하였습니다. 분석 결과, 랜섬웨어, 제로데이 취약점 악용, 데이터 유출과 같은 주요 위협이 예상대로 증가하고 더 정교해지고 있음을 확인하였습니다. 이러한 비교 분석을 통해 현재 보안 환경의 주요 트렌드를 명확히 파악하고, 기업과 개인이 취해야 할 보안 조치와 대응 방안을 도출하였습니다.</p>
+
+<p>특히, 보안 위협이 빠르게 진화하고 공격 방식이 점점 다양해짐에 따라, 조직은 자산 관리와 취약점 대응을 강화하고 공격 표면을 줄이기 위한 전략을 수립해야 할 필요가 있습니다. 이번 연구에서 도출한 최신 Attack Surface 정보는 조직이 직면할 수 있는 잠재적 위협을 명확히 이해하고 대비하는 데 중요한 자료로 활용될 수 있을 것입니다. 사이버 보안의 중요성은 단순히 기술적인 방어에 그치지 않으며, 보안 교육과 인식 제고, 협력을 통한 종합적인 대응 전략이 필수적임을 다시 한번 확인할 수 있었습니다.</p>
+
+    </div>
+
+    <div class="post__share">
+      <div class="share__list">
+        <a class="share__link share__facebook" href="https://www.facebook.com/sharer/sharer.php?u=/2024/10/25/2024-%EC%82%AC%EC%9D%B4%EB%B2%84-%EA%B3%B5%EA%B2%A9-%EB%8F%99%ED%96%A5-%EC%97%B0%EA%B5%AC/" onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook" rel="nofollow"><i class="ion ion-logo-facebook"></i></a>
+
+        <a class="share__link share__twitter" href="https://twitter.com/intent/tweet?text=2024%20%EC%82%AC%EC%9D%B4%EB%B2%84%20%EA%B3%B5%EA%B2%A9%20%EB%8F%99%ED%96%A5%20%EC%97%B0%EA%B5%AC&url=/2024/10/25/2024-%EC%82%AC%EC%9D%B4%EB%B2%84-%EA%B3%B5%EA%B2%A9-%EB%8F%99%ED%96%A5-%EC%97%B0%EA%B5%AC/" onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter" rel="nofollow"><i class="ion ion-logo-twitter"></i></a>
+
+        <a class="share__link share__pinterest" href="http://pinterest.com/pin/create/button/?url=/2024/10/25/2024-%EC%82%AC%EC%9D%B4%EB%B2%84-%EA%B3%B5%EA%B2%A9-%EB%8F%99%ED%96%A5-%EC%97%B0%EA%B5%AC/&amp;media=/images/posts/2024-10-25-2024-사이버-공격-동향-연구.jpg&amp;description=2024%20%EC%82%AC%EC%9D%B4%EB%B2%84%20%EA%B3%B5%EA%B2%A9%20%EB%8F%99%ED%96%A5%20%EC%97%B0%EA%B5%AC" onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;" title="Share on Pinterest" rel="nofollow"><i class="ion ion-logo-pinterest"></i></a>
+      </div>
+    </div>
+
+    <div class="post__navigation">
+      
+      
+      <a class="next" href="/2024/10/25/MITRE-ATT&CK-%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%EB%A5%BC-%EA%B8%B0%EB%B0%98%ED%95%9C-%ED%95%B4%ED%82%B9-%EA%B7%B8%EB%A3%B9-%EA%B3%B5%EA%B2%A9-%EC%82%AC%EB%A1%80-%EC%97%B0%EA%B5%AC/">
+        <img class="post__nav-image lazy" data-src="/images/posts/2024-10-25-MITRE-ATT&CK-프레임워크를-기반한-해킹-그룹-공격-사례-연구.jpg" alt="MITRE ATT&CK 프레임워크를</br>기반한 해킹 그룹 공격 사례 연구">
+        <div class="post__nav-box">
+          <div class="post__nav post__nav__next">Next Post <i class="ion ion-md-arrow-forward"></i></div>
+          <h4 class="post__nav__title">MITRE ATT&CK 프레임워크를</br>기반한 해킹 그룹 공격 사례 연구</h4>
+        </div>
+      </a>
+      
+    </div>
+
+  </article>
+</div>
+<!-- end post -->
+
+
+
+
+
+
+
+<div class="container">
+  <div class="related-posts ">
+    <div class="row">
+      <div class="col col-12">
+        <div class="container__inner">
+          <h3 class="related-title">You may also like</h3>
+          <div class="row grid">
+
+          
+            
+            
+
+            
+
+            
+            
+            
+            
+
+            
+
+            
+            
+            
+            
+
+            
+
+            
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--  --></main>
+    <!-- end content -->
+
+    <div class="top" title="Top"><i class="ion ion-ios-arrow-up"></i></div>
+    
+    <script src="/js/vendors/jquery-3.5.1.min.js"></script>
+<script src="/js/vendors/simple-jekyll-search.min.js"></script>
+<script src="/js/vendors/jquery.fitvids.js"></script>
+<script src="/js/vendors/lazyload.min.js"></script>
+<script src="/js/vendors/transition.js"></script>
+<script src="/js/vendors/zoom.min.js"></script>
+<script src="/js/common.js"></script>
+<script>
+  var base_url = "",
+    pagination_next_url = base_url + '/page2',
+    pagination_next_page_number = '',
+    pagination_available_pages_number = '';
+</script>
+  </body>
+</html>
