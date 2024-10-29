@@ -5,10 +5,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>SEMINAR & CTF</title>
-  <meta name='description' content='~~~~~~~'>
+  <title>Redhat RHSA OVAL 기반의 취약점 진단 방법</title>
+  <meta name='description' content='보안 취약점은 시스템의 안전성과 신뢰성을 저하시킬 수 있는 주요 위협입니다. 특히, 기업 환경에서 사용하는 운영체제와 소프트웨어에 대한 적절한 취약점 진단 및 패치 적용은 시.....'>
 
-  <link rel="canonical" href="/2024/10/25/seminar-ctf/">
+  <link rel="canonical" href="/2024/10/25/Redhat-RHSA-OVAL-%EA%B8%B0%EB%B0%98%EC%9D%98-%EC%B7%A8%EC%95%BD%EC%A0%90-%EC%A7%84%EB%8B%A8-%EB%B0%A9%EB%B2%95/">
   <link rel="alternate" type="application/rss+xml" title="SASM" href="/feed.xml">
 
   <!-- Fonts -->
@@ -167,7 +167,7 @@
       
       <div class="col col-6 col-t-12">
         <div class="image-box">
-          <img class="post-image lazy" data-src="/images/posts/목포대학교 세미나.png" alt="SEMINAR & CTF">
+          <img class="post-image lazy" data-src="/images/posts/2024-10-25-Redhat-RHSA-OVAL-기반의-취약점-진단-방법.jpg" alt="Redhat RHSA OVAL 기반의 취약점 진단 방법">
         </div>
       </div>
       
@@ -179,24 +179,24 @@
             <span class="post__minutes">
               
               
-                1 min read
+                5 min read
               
               <time class="post__date"
                 datetime="2024-10-25T10:00:00+00:00">2024-10-25 10:00</time>
             </span>
           </div>
         
-          <h2 class="post__title">SEMINAR & CTF</h2>
+          <h2 class="post__title">Redhat RHSA OVAL 기반의 취약점 진단 방법</h2>
         
           <div class="post__bottom">
         
             <div class="post__author">
               <img class="post__author-image"
-                  src="/images/SASM_logo.png" alt="SASM Team's Picture"></a>
+                  src="/images/김태훈.png" alt="Taehoon Kim's Picture"></a>
             </div>
         
             <div class="post__bottom-meta">
-              <span class="post__author-link">SASM Team</span>
+              <span class="post__author-link">Taehoon Kim</span>
               
             </div>
           </div>
@@ -212,31 +212,241 @@
   <article class="post animate">
 
     <div class="post__content">
-      <h1 id="목차">목차</h1>
-<p>내용 작성 필요</p>
+      <h1 id="개요">개요</h1>
+<p>보안 취약점은 시스템의 안전성과 신뢰성을 저하시킬 수 있는 주요 위협입니다. 특히, 기업 환경에서 사용하는 운영체제와 소프트웨어에 대한 적절한 취약점 진단 및 패치 적용은 시스템을 보호하고 잠재적인 보안 사고를 예방하는 데 필수적입니다. 본 연구에서는 Red Hat RHSA와 OVAL을 활용한 자동화된 취약점 진단 방법을 제시합니다. 이를 통해 보안 팀은 효율적으로 취약점을 탐지하고 대응할 수 있으며, 시스템 관리자는 최신 보안 권고에 따른 패치를 신속하게 적용할 수 있습니다. 이러한 연구는 시스템 보안의 자동화와 일관성을 높이는 것을 목표로 합니다.</p>
+
+<h2 id="연구의-필요성">연구의 필요성</h2>
+<p>취약점의 증가는 기업의 보안 위협을 증가시키며, 이를 빠르게 진단하고 대응하는 자동화 도구의 필요성이 대두되었습니다. 특히, Red Hat 제품을 사용하는 기업 환경에서 효율적인 취약점 관리가 요구되고 있습니다. 본 연구는 이러한 필요성에 대응하여 Red Hat RHSA와 OVAL 파일을 활용한 취약점 진단 도구를 개발하게 되었습니다.</p>
+
+<h2 id="기대-효과">기대 효과</h2>
+<p>이 도구는 보안 관리자가 Red Hat 시스템의 취약점을 빠르게 식별하고 패치를 적용할 수 있도록 하여, 운영 효율성과 보안성을 동시에 강화합니다. 이를 통해 취약점으로 인한 보안 사고의 위험을 줄이고, 시스템 가용성을 높이는 효과를 기대할 수 있습니다.</p>
+
+<h1 id="rhsa란">RHSA란?</h1>
+<p>RHSA는 “Red Hat Security Advisory”의 약자로, Red Hat에서 제공하는 보안 공지입니다. RHSA는 Red Hat Enterprise Linux (RHEL) 및 Red Hat 제품에서 발견된 보안 취약점, 버그 수정 및 중요한 업데이트에 대한 정보를 포함하고 있습니다.</p>
+
+<h2 id="rhsa의-주요-정보">RHSA의 주요 정보</h2>
+<ul>
+  <li>취약점에 대한 상세 설명: 발견된 취약점의 유형과 영향을 설명합니다.</li>
+  <li>취약점의 심각도: 보통, 중요, 긴급 등의 등급으로 구분하여 보안 패치를 얼마나 신속하게 적용해야 할지 안내합니다.</li>
+  <li>업데이트 및 패치 방법: 취약점을 해결하기 위해 설치해야 하는 패치나 패키지 버전을 제공합니다.</li>
+  <li>CVE 정보: 해당 취약점이 CVE(Common Vulnerabilities and Exposures)에 등록된 경우, 관련 CVE 번호를 포함하여 다른 보안 정보와 연계할 수 있도록 합니다.</li>
+</ul>
+
+<p>RHSA는 Red Hat 제품을 사용하는 환경에서 최신 보안 패치를 확인하고 적용하는 데 매우 중요합니다.</p>
+
+<h1 id="oval이란">OVAL이란?</h1>
+<p>OVAL은 취약점과 관련된 정보를 표현하기 위해 사용되는 XML 기반 언어로, 시스템에서 취약점을 자동으로 감지하고 평가할 수 있도록 표준화된 형식을 제공합니다.</p>
+
+<h2 id="rhsa-oval-파일의-역할">RHSA OVAL 파일의 역할</h2>
+<ul>
+  <li>자동 취약점 진단: OVAL 파일을 통해 보안 도구가 Red Hat 시스템에서 해당 보안 권고와 관련된 취약점이 존재하는지 자동으로 검사할 수 있습니다.</li>
+  <li>일관성 있는 평가: OVAL의 표준화된 구조 덕분에 보안 솔루션 간에 일관된 취약점 평가를 수행할 수 있습니다.</li>
+  <li>보안 자동화 지원: 보안 팀이 시스템 보안을 관리하는 데 필요한 시간을 줄여주며, 효율적으로 취약점을 탐지하고 대응할 수 있도록 합니다.</li>
+</ul>
+
+<p>RHSA OVAL은 Red Hat에서 제공하는 보안 공지를 OVAL(Open Vulnerability and Assessment Language) 형식으로 제공하는 파일입니다. 이 파일은 Red Hat Enterprise Linux와 관련된 보안 솔루션에서 많이 사용되며, 관리자는 이 파일을 통해 RHSA에서 제공하는 취약점과 관련된 정보를 시스템에 자동으로 적용할 수 있습니다.</p>
+
+<h1 id="rhsacvescanner-소개">rhsaCveScanner 소개</h1>
+<p>“rhsaCveScanner”는 Python으로 작성된 레드햇 계열 리눅스 패키지 취약점 진단 도구입니다.</p>
+
+<h2 id="개발-과정">개발 과정</h2>
+<p>도구 개발은 Python 언어를 기반으로 하여 OVAL 파일 파싱, 패키지 정보 수집, 취약점 매칭 등의 과정을 거쳐 이루어졌습니다. 이 과정에서 XML 파일을 효율적으로 처리하기 위해 xmltodict 라이브러리를 사용하였고, 시스템 정보를 수집하기 위해 psutil을 활용하였습니다. 또한, 최신 OVAL 파일을 다운로드하기 위해 requests 라이브러리를 사용하였습니다.</p>
+
+<h3 id="개발-환경">개발 환경</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;REDHAT-LINUX&gt;
+    OSNAME              Rocky Linux
+    OSVERSION           9.2 (Blue Onyx)
+    KERNELNAME          Linux
+    KERNELVERSION       5.14.0-284.30.1.el9_2.x86_64
+    KERNELBITS          64
+    ARCHITECTURE        x86_64
+    LASTPATCHED         2023-09-20
+
+&lt;PYTHON&gt;
+    VERSION             3.9.16
+</code></pre></div></div>
+
+<h3 id="사용된-python-라이브러리">사용된 Python 라이브러리</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cvss==3.2
+psutil==5.9.6
+requests==2.31.0
+xmltodict==0.12.0
+</code></pre></div></div>
+
+<h2 id="사용-방법">사용 방법</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># python3 rhsaCveScanner -h
+usage: rhsaCveScanner [-h] [-v] [-d] (-V | -R | -C)
+
+                                               *
+                                              **             *   *        
+                                              *                 *         
+                                        * *   *              *            
+                                          **  **              **          
+                                              **              *        *  
+                                                **           *    *  **   
+                                                  ***      ***   * ***    
+                                                      ************        
+                                                            ****          
+                                                        **********        
+                                                         ***********      
+                                                          ******* *****   
+                                                          ****************
+                                                         ***** ***********
+                                                        *****  *****      
+       ****                          ****             ******  ****        
+    *********         ***          ********     ****  ****** *****        
+    **               *****        **            ***** ***** *****         
+    ***             ***  **       ***           ****** ***  *****         
+     *******        **   ***       *******      **  **  *  **  **         
+          ****     **     **            ****    ***  **   **   **         
+            **    ***********             ***   ****  ** ***   **         
+    **     ***   ***       ***    **      **    ***** *****    **         
+    ********     **         ***    ********  *  *****  ***     **         
+                                           ***  ******                    
+           **                        *******************                  
+            *******************************************                   
+             *************************    **************                  
+            ***************                ****   ********                
+        ***********  ******                ****       ******              
+       *********     *****                 ***           ***              
+       ****         *****                  ***           ***              
+      ***           *****                  ***          **                
+     ***             ****                  **          **                 
+    ***                ***                 **         **                  
+    **                   **                *        ***                   
+   **                     ***             **      ***                     
+  ***                       **            **                               
+ ***                         **           **                               
+**                             **         **                               
+                                *          **
+
+rhsaCveScanner v1.0.0
+
+General Commands:
+  -h, --help            Show this help message
+  -v, --version         Show program's version
+  -d, --debug           Enable debug mode
+
+Commands:
+  -V, --dataset-version
+                        Show the date when dataset created
+  -R, --dataset-rebuild
+                        Rebuild dataset from RHSA OVALs
+  -C, --cve-scan        Scanning CVEs with rpm packages
+</code></pre></div></div>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">-V</code>, <code class="language-plaintext highlighter-rouge">--dataset-version</code>: dataset 파일의 생성 날짜를 출력합니다.</li>
+  <li><code class="language-plaintext highlighter-rouge">-R</code>, <code class="language-plaintext highlighter-rouge">--dataset-rebuild</code>: 최신 Red Hat RHSA OVAL 파일을 모두 다운받아 가공하여 단일 파일로 병합합니다.</li>
+  <li><code class="language-plaintext highlighter-rouge">-C</code>, <code class="language-plaintext highlighter-rouge">--cve-scan</code>: dataset 파일 기준으로 현재 시스템(레드햇 계열 리눅스만 가능)에 설치된 RPM 패키지들에 대한 취약점을 진단합니다.</li>
+</ul>
+
+<h3 id="샘플-결과">샘플 결과</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># python3 rhsaCveScanner -C ./dataset.json
+{
+    "el9": {
+        "libssh-config": {
+            "_installed": "libssh-config-0:0.10.4-8.el9",
+            "_vulnfixed": "libssh-config-0:0.10.4-13.el9",
+            "cve": [
+                "CVE-2023-2283",
+                "CVE-2023-6918",
+                "CVE-2023-6004",
+                "CVE-2023-1667"
+            ]
+        },
+        "glib2": {
+            "_installed": "glib2-0:2.68.4-6.el9",
+            "_vulnfixed": "glib2-0:2.68.4-11.el9",
+            "cve": [
+                "CVE-2023-29499",
+                "CVE-2023-32611",
+                "CVE-2023-32665"
+            ]
+        }
+    },
+    "el9_1": {
+        "kernel-core": {
+            "_installed": "kernel-core-0:5.14.0-162.6.1.el9_1",
+            "_vulnfixed": "kernel-core-0:5.14.0-162.23.1.el9_1",
+            "cve": [
+                "CVE-2022-2964",
+                "CVE-2022-4744",
+                "CVE-2022-4379",
+                "CVE-2022-4269",
+                "CVE-2022-30594",
+                "CVE-2023-0266",
+                "CVE-2022-2959",
+                "CVE-2022-4378",
+                "CVE-2023-0179",
+                "CVE-2023-0386",
+                "CVE-2022-4139",
+                "CVE-2022-43945",
+                "CVE-2022-2873",
+                "CVE-2022-3564",
+                "CVE-2022-3077"
+            ]
+        }
+    },
+    "el9_2": {
+        "openssl-devel": {
+            "_installed": "openssl-devel-1:3.0.7-17.el9_2",
+            "_vulnfixed": "openssl-devel-1:3.0.7-18.el9_2",
+            "cve": [
+                "CVE-2023-5363"
+            ]
+        }
+    }
+}
+</code></pre></div></div>
+<p>위 출력은 각 필드의 의미를 다음과 같이 나타냅니다.</p>
+<ul>
+  <li>_installed: 현재 시스템에 설치된 패키지의 실제 버전입니다.</li>
+  <li>cve: 해당 버전에 대해 알려진 취약점의 CVE-ID입니다.</li>
+  <li>_vulnfixed: cve에 명시된 취약점들을 회피하기 위해 Red Hat에서 권고하는 안전한 버전입니다.</li>
+</ul>
+
+<h1 id="결론-및-한계">결론 및 한계</h1>
+<p>이 도구는 대부분의 Red Hat 시스템에서 효율적으로 작동하지만, 일부 복잡한 환경에서는 추가적인 설정이 필요할 수 있습니다. 예를 들어, 다양한 네트워크 환경에서 OVAL 파일을 다운로드하거나 시스템 구성에 따라 XML 파싱이 실패할 가능성이 있습니다. 향후 다른 리눅스 배포판 지원을 추가하여 확장성을 높일 계획입니다.</p>
+
+<h2 id="마치며">마치며</h2>
+<p>Red Hat뿐만 아니라 다른 벤더사들 또한 보안 권고 데이터를 공개하고 있습니다.</p>
+<ul>
+  <li>Microsoft: MSRC (Microsoft Security Response Center)</li>
+  <li>Debian: DSA (Debian Security Advisory)</li>
+  <li>Canonical (Ubuntu): USN (Ubuntu Security Notices)
+이러한 보안 권고 데이터들 또한 OVAL 혹은 CVRF 등과 같은 표준화된 보안 데이터 표현 방식을 채택하고 있습니다. 이러한 보안 권고 데이터를 활용한다면 자동화된 보안 취약점 진단 및 패치 관리 체계를 구축할 수 있습니다.</li>
+</ul>
 
     </div>
 
     <div class="post__share">
       <div class="share__list">
-        <a class="share__link share__facebook" href="https://www.facebook.com/sharer/sharer.php?u=/2024/10/25/seminar-ctf/" onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook" rel="nofollow"><i class="ion ion-logo-facebook"></i></a>
+        <a class="share__link share__facebook" href="https://www.facebook.com/sharer/sharer.php?u=/2024/10/25/Redhat-RHSA-OVAL-%EA%B8%B0%EB%B0%98%EC%9D%98-%EC%B7%A8%EC%95%BD%EC%A0%90-%EC%A7%84%EB%8B%A8-%EB%B0%A9%EB%B2%95/" onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook" rel="nofollow"><i class="ion ion-logo-facebook"></i></a>
 
-        <a class="share__link share__twitter" href="https://twitter.com/intent/tweet?text=SEMINAR%20&%20CTF&url=/2024/10/25/seminar-ctf/" onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter" rel="nofollow"><i class="ion ion-logo-twitter"></i></a>
+        <a class="share__link share__twitter" href="https://twitter.com/intent/tweet?text=Redhat%20RHSA%20OVAL%20%EA%B8%B0%EB%B0%98%EC%9D%98%20%EC%B7%A8%EC%95%BD%EC%A0%90%20%EC%A7%84%EB%8B%A8%20%EB%B0%A9%EB%B2%95&url=/2024/10/25/Redhat-RHSA-OVAL-%EA%B8%B0%EB%B0%98%EC%9D%98-%EC%B7%A8%EC%95%BD%EC%A0%90-%EC%A7%84%EB%8B%A8-%EB%B0%A9%EB%B2%95/" onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter" rel="nofollow"><i class="ion ion-logo-twitter"></i></a>
 
-        <a class="share__link share__pinterest" href="http://pinterest.com/pin/create/button/?url=/2024/10/25/seminar-ctf/&amp;media=/images/posts/목포대학교 세미나.png&amp;description=SEMINAR%20&%20CTF" onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;" title="Share on Pinterest" rel="nofollow"><i class="ion ion-logo-pinterest"></i></a>
+        <a class="share__link share__pinterest" href="http://pinterest.com/pin/create/button/?url=/2024/10/25/Redhat-RHSA-OVAL-%EA%B8%B0%EB%B0%98%EC%9D%98-%EC%B7%A8%EC%95%BD%EC%A0%90-%EC%A7%84%EB%8B%A8-%EB%B0%A9%EB%B2%95/&amp;media=/images/posts/2024-10-25-Redhat-RHSA-OVAL-기반의-취약점-진단-방법.jpg&amp;description=Redhat%20RHSA%20OVAL%20%EA%B8%B0%EB%B0%98%EC%9D%98%20%EC%B7%A8%EC%95%BD%EC%A0%90%20%EC%A7%84%EB%8B%A8%20%EB%B0%A9%EB%B2%95" onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;" title="Share on Pinterest" rel="nofollow"><i class="ion ion-logo-pinterest"></i></a>
       </div>
     </div>
 
     <div class="post__navigation">
       
-      <a class="prev" href="/2024/10/25/Redhat-RHSA-OVAL-%EA%B8%B0%EB%B0%98%EC%9D%98-%EC%B7%A8%EC%95%BD%EC%A0%90-%EC%A7%84%EB%8B%A8-%EB%B0%A9%EB%B2%95/">
-        <img class="post__nav-image lazy" data-src="/images/posts/2024-10-25-Redhat-RHSA-OVAL-기반의-취약점-진단-방법.jpg" alt="Redhat RHSA OVAL 기반의 취약점 진단 방법">
+      <a class="prev" href="/2024/10/25/MITRE-ATT&CK-%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%EB%A5%BC-%EA%B8%B0%EB%B0%98%ED%95%9C-%ED%95%B4%ED%82%B9-%EA%B7%B8%EB%A3%B9-%EA%B3%B5%EA%B2%A9-%EC%82%AC%EB%A1%80-%EC%97%B0%EA%B5%AC/">
+        <img class="post__nav-image lazy" data-src="/images/posts/2024-10-25-MITRE-ATT&CK-프레임워크를-기반한-해킹-그룹-공격-사례-연구.jpg" alt="MITRE ATT&CK 프레임워크를</br>기반한 해킹 그룹 공격 사례 연구">
         <div class="post__nav-box">
           <div class="post__nav post__nav__prev"><i class="ion ion-md-arrow-round-back"></i> Previous Post</div>
-          <h4 class="post__nav__title">Redhat RHSA OVAL 기반의 취약점 진단 방법</h4>
+          <h4 class="post__nav__title">MITRE ATT&CK 프레임워크를</br>기반한 해킹 그룹 공격 사례 연구</h4>
         </div>
       </a>
       
+      
+      <a class="next" href="/2024/10/25/seminar-ctf/">
+        <img class="post__nav-image lazy" data-src="/images/posts/목포대학교 세미나.png" alt="SEMINAR & CTF">
+        <div class="post__nav-box">
+          <div class="post__nav post__nav__next">Next Post <i class="ion ion-md-arrow-forward"></i></div>
+          <h4 class="post__nav__title">SEMINAR & CTF</h4>
+        </div>
+      </a>
       
     </div>
 
